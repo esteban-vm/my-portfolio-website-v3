@@ -26,6 +26,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  transpilePackages: ['@teispace/next-themes'],
 }
 
 export default nextConfig
