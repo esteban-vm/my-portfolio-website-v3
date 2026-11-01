@@ -1,36 +1,42 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "@teispace/next-themes/tailwind.css";
+@import "open-glass-ui/styles.css";
 
 @plugin "fluid-tailwindcss";
 
-@plugin "daisyui" {
-  logs: false;
-  themes: emerald, synthwave;
+:root {
+  --background: #ffffff;
+  color-scheme: light;
 }
 
-@source "../../node_modules/rsc-daisyui/dist";
-
-@custom-variant dark (&:where([data-theme="synthwave"], [data-theme="synthwave"] *, .synthwave, .synthwave *));
+.dark {
+  --background: #0a0a0a;
+  color-scheme: dark;
+}
 
 @theme {
   --font-geist: var(--geist);
   --font-good-times: var(--good-times);
   --font-axis: var(--axis);
-  --animate-float-up: float-up 18s linear infinite;
+  --animate-grid-move: grid-move 8s linear infinite;
+  --color-background: var(--background);
+
+  @keyframes grid-move {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 40px 40px;
+    }
+  }
 }
 
 @layer base {
   * {
+    scrollbar-color: var(--color-teal-500) var(--color-teal-900);
     scrollbar-width: thin;
-
-    &::selection {
-      @apply bg-success text-success-content;
-    }
-  }
-
-  html {
-    @apply font-geist;
   }
 
   a,
@@ -40,8 +46,10 @@
   ::placeholder {
     @apply select-none;
   }
+}
 
-  .btn {
-    @apply font-axis;
-  }
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(88, 215, 158, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 215, 158, 0.12) 1px, transparent 1px);
 }
