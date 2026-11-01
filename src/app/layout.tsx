@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from 'next'
+import { ThemeProvider } from '@teispace/next-themes'
+import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
+import { Button, Toolbar } from 'open-glass-ui'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
+import { GlassProviders } from './glass-providers'
 import '@/styles/globals.css'
+
+export const instant = false
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +21,9 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 }
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+export default async function RootLayout({ children }: LayoutProps<'/'>) {
+  const initialTheme = (await getTheme()) ?? undefined
+
   return (
     <html
       className={`${Axis.variable} ${Geist.variable} ${GoodTimes.variable} h-full antialiased`}
@@ -23,7 +31,35 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       lang='en'
       suppressHydrationWarning
     >
-      <body className='flex min-h-full flex-col'>{children}</body>
+      <head>
+        <script {...getThemeScriptProps({ attribute: 'class', initialTheme })} />
+      </head>
+      <body className='relative h-full'>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          disableTransitionOnChange
+          enableColorScheme={false}
+          enableSystem
+          initialTheme={initialTheme}
+          noScript
+          storage='hybrid'
+          themes={['light', 'dark']}
+        >
+          <div className='fixed inset-0 size-full overflow-auto bg-background bg-grid bg-size-[40px_40px] motion-safe:animate-grid-move'>
+            <GlassProviders>
+              <header className='sticky inset-x-0 top-2 z-10'>
+                <Toolbar label='Editing tools'>
+                  <Button variant='quiet'>Crop</Button>
+                  <Button variant='quiet'>Adjust</Button>
+                </Toolbar>
+              </header>
+              {children}
+              <footer className='mb-2 shrink-0 grow-0 border border-teal-100 text-center'>Footer</footer>
+            </GlassProviders>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
