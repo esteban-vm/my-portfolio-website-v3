@@ -25,7 +25,6 @@
           "level": "error",
           "fix": "safe",
           "options": {
-            "attributes": ["additionalClass", "toastClassName"],
             "functions": ["clsx", "cva", "cn", "tw", "tw.*"]
           }
         }
