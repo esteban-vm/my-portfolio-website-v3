@@ -27,7 +27,7 @@ export default function HomePage() {
 
       <div className='md:col-span-2 lg:col-span-1'>
         <div className='glass glass-surface glass-blur-4 glass-saturation-150 glass-brightness-110 glass-strength-5 rounded-xl p-6'>
-          Frosted glass panel
+          Contact
         </div>
       </div>
 
