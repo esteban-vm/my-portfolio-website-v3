@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "@teispace/next-themes/tailwind.css";
 @import "open-glass-ui/styles.css";
+@import "tw-glass";
 
 @plugin "fluid-tailwindcss";
 
