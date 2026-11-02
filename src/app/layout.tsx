@@ -4,6 +4,8 @@ import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { Button, Toolbar } from 'open-glass-ui'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import { GlassProviders } from './glass-providers'
+import { LanguageButton } from './language-button'
+import { ThemeButton } from './theme-button'
 import '@/styles/globals.css'
 
 export const instant = false
@@ -46,12 +48,15 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           storage='hybrid'
           themes={['light', 'dark']}
         >
-          <div className='fixed inset-0 size-full overflow-auto bg-background bg-grid bg-size-[40px_40px] motion-safe:animate-grid-move'>
+          <div className='fixed inset-0 size-full overflow-auto bg-background bg-grid bg-size-[40px_40px]'>
             <GlassProviders>
               <header className='sticky inset-x-0 top-2 z-10'>
-                <Toolbar label='Editing tools'>
+                <Toolbar className='justify-between' label='Editing tools'>
                   <Button variant='quiet'>Crop</Button>
-                  <Button variant='quiet'>Adjust</Button>
+                  <div className='space-x-1.5'>
+                    <LanguageButton />
+                    <ThemeButton />
+                  </div>
                 </Toolbar>
               </header>
               {children}
