@@ -13,7 +13,6 @@ export function GlassProviders({ children }: { children: ReactNode }) {
       <GlassThemeProvider
         appearance={theme as GlassAppearancePreference}
         className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'
-        design='classic'
         theme={{ preset: 'teal', contrast: 'high', radius: 'balanced' }}
       >
         {children}
