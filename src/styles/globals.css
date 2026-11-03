@@ -8,11 +8,13 @@
 
 :root {
   --background: #ffffff;
+  --foreground: #171717;
   color-scheme: light;
 }
 
 .dark {
   --background: #0a0a0a;
+  --foreground: #ededed;
   color-scheme: dark;
 }
 
@@ -20,7 +22,10 @@
   --font-geist: var(--geist);
   --font-good-times: var(--good-times);
   --font-axis: var(--axis);
+
   --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
   --animate-grid-move: grid-move 8s linear infinite;
 
   @keyframes grid-move {
