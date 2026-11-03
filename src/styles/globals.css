@@ -42,3 +42,7 @@
     @apply select-none;
   }
 }
+
+.action-button {
+  @apply glass glass-surface flex size-10 cursor-pointer items-center justify-center rounded-full transition hover:opacity-50 active:scale-95 disabled:opacity-50;
+}
