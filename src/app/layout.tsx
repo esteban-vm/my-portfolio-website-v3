@@ -48,7 +48,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         >
           <div className='fixed inset-0 size-full overflow-auto bg-background text-foreground'>
             <div className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'>
-              <header className='sticky inset-x-0 top-2 z-10 flex items-center justify-between border border-foreground/30'>
+              <header className='glass glass-surface sticky inset-x-0 top-2 z-10 flex items-center justify-between rounded-2xl px-4 py-3'>
                 <div>Logo</div>
                 <div className='flex gap-1.5'>
                   <LanguageButton />
