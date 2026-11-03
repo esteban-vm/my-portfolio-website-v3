@@ -15,13 +15,13 @@ export function LanguageButton() {
 
   return (
     <button
-      className='glass glass-surface group flex size-10 cursor-pointer items-center justify-center rounded-full transition active:scale-95 disabled:opacity-50'
+      className='action-button'
       disabled={isPending}
       onClick={onLanguageChange}
       title='Cambiar idioma'
       type='button'
     >
-      <IoLanguage className='group-hover:motion-safe:animate-pulse' />
+      <IoLanguage />
     </button>
   )
 }
