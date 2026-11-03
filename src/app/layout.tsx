@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { ThemeProvider } from '@teispace/next-themes'
 import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
-import { Button, Toolbar } from 'open-glass-ui'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
-import { GlassProviders } from './glass-providers'
-import { LanguageButton } from './language-button'
-import { ThemeButton } from './theme-button'
+import { LanguageButtonV2 } from './language-button-v2'
+import { ThemeButtonV2 } from './theme-button-v2'
 import '@/styles/globals.css'
 
 export const instant = false
@@ -48,20 +46,18 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           storage='hybrid'
           themes={['light', 'dark']}
         >
-          <div className='fixed inset-0 size-full overflow-auto bg-background bg-grid bg-size-[40px_40px]'>
-            <GlassProviders>
-              <header className='sticky inset-x-0 top-2 z-10'>
-                <Toolbar className='justify-between' label='Editing tools'>
-                  <Button variant='quiet'>Crop</Button>
-                  <div className='space-x-1.5'>
-                    <LanguageButton />
-                    <ThemeButton />
-                  </div>
-                </Toolbar>
+          <div className='fixed inset-0 size-full overflow-auto bg-background text-foreground'>
+            <div className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'>
+              <header className='sticky inset-x-0 top-2 z-10 flex items-center justify-between border border-slate-500'>
+                <div>Logo</div>
+                <div className='flex gap-1.5'>
+                  <LanguageButtonV2 />
+                  <ThemeButtonV2 />
+                </div>
               </header>
               {children}
-              <footer className='mb-2 shrink-0 grow-0 border border-teal-100 text-center'>Footer</footer>
-            </GlassProviders>
+              <footer className='mb-2 shrink-0 grow-0 border border-slate-500 text-center'>Footer</footer>
+            </div>
           </div>
         </ThemeProvider>
       </body>
