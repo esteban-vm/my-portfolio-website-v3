@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import { ThemeProvider } from '@teispace/next-themes'
 import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
-import { LanguageButtonV2 } from './language-button-v2'
-import { ThemeButtonV2 } from './theme-button-v2'
+import { LanguageButton } from './language-button'
+import { ThemeButton } from './theme-button'
 import '@/styles/globals.css'
 
 export const instant = false
@@ -51,8 +51,8 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
               <header className='sticky inset-x-0 top-2 z-10 flex items-center justify-between border border-slate-500'>
                 <div>Logo</div>
                 <div className='flex gap-1.5'>
-                  <LanguageButtonV2 />
-                  <ThemeButtonV2 />
+                  <LanguageButton />
+                  <ThemeButton />
                 </div>
               </header>
               {children}
