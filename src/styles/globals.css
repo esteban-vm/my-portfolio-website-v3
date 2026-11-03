@@ -40,7 +40,7 @@
 
 @layer base {
   * {
-    scrollbar-color: var(--color-teal-500) var(--color-teal-900);
+    scrollbar-color: var(--color-foreground);
     scrollbar-width: thin;
   }
 

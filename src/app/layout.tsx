@@ -48,7 +48,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
         >
           <div className='fixed inset-0 size-full overflow-auto bg-background text-foreground'>
             <div className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'>
-              <header className='sticky inset-x-0 top-2 z-10 flex items-center justify-between border border-slate-500'>
+              <header className='sticky inset-x-0 top-2 z-10 flex items-center justify-between border border-foreground/30'>
                 <div>Logo</div>
                 <div className='flex gap-1.5'>
                   <LanguageButton />
@@ -56,7 +56,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
                 </div>
               </header>
               {children}
-              <footer className='mb-2 shrink-0 grow-0 border border-slate-500 text-center'>Footer</footer>
+              <footer className='mb-2 shrink-0 grow-0 border border-foreground/30 text-center'>Footer</footer>
             </div>
           </div>
         </ThemeProvider>
