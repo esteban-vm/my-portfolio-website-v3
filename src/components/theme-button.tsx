@@ -8,16 +8,12 @@ export function ThemeButton() {
 
   return (
     <button
-      className='glass glass-surface group flex size-10 cursor-pointer items-center justify-center rounded-full transition active:scale-95'
+      className='action-button'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       title='Cambiar tema'
       type='button'
     >
-      {theme === 'dark' ? (
-        <FaSun className='group-hover:motion-safe:animate-pulse' />
-      ) : (
-        <FaMoon className='group-hover:motion-safe:animate-pulse' />
-      )}
+      {theme === 'dark' ? <FaSun /> : <FaMoon />}
     </button>
   )
 }
