@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { ThemeProvider } from '@teispace/next-themes'
 import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import { LanguageButton } from './language-button'
 import { ThemeButton } from './theme-button'
@@ -22,13 +24,15 @@ export const viewport: Viewport = {
 }
 
 export default async function RootLayout({ children }: LayoutProps<'/'>) {
-  const initialTheme = (await getTheme()) ?? undefined
+  const locale = await getLocale()
+  const initialTheme = (await getTheme()) ?? ''
+  const t = await getTranslations()
 
   return (
     <html
       className={`${Axis.variable} ${Geist.variable} ${GoodTimes.variable} h-full antialiased`}
       dir='ltr'
-      lang='en'
+      lang={locale}
       suppressHydrationWarning
     >
       <head>
@@ -46,19 +50,21 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           storage='hybrid'
           themes={['light', 'dark']}
         >
-          <div className='fixed inset-0 size-full overflow-auto bg-background text-foreground'>
-            <div className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'>
-              <header className='glass glass-surface sticky inset-x-0 top-2 z-10 flex items-center justify-between rounded-2xl px-4 py-3'>
-                <div>Logo</div>
-                <div className='flex gap-1.5'>
-                  <LanguageButton />
-                  <ThemeButton />
-                </div>
-              </header>
-              {children}
-              <footer className='mb-2 shrink-0 grow-0 border border-foreground/30 text-center'>Footer</footer>
+          <NextIntlClientProvider>
+            <div className='fixed inset-0 size-full overflow-auto bg-background text-foreground'>
+              <div className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'>
+                <header className='glass glass-surface sticky inset-x-0 top-2 z-10 flex items-center justify-between rounded-2xl px-4 py-3'>
+                  <div>{t('test')}</div>
+                  <div className='flex gap-1.5'>
+                    <LanguageButton />
+                    <ThemeButton />
+                  </div>
+                </header>
+                {children}
+                <footer className='mb-2 shrink-0 grow-0 border border-foreground/30 text-center'>Footer</footer>
+              </div>
             </div>
-          </div>
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

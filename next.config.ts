@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import createNextIntlPlugin from 'next-intl/plugin'
 
 const nextConfig: NextConfig = {
   typedRoutes: true,
@@ -29,4 +30,6 @@ const nextConfig: NextConfig = {
   transpilePackages: ['@teispace/next-themes'],
 }
 
-export default nextConfig
+const withNextIntl = createNextIntlPlugin()
+
+export default withNextIntl(nextConfig)
