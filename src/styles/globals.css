@@ -28,21 +28,23 @@
   --color-foreground: var(--foreground);
 }
 
-@layer base {
-  * {
-    scrollbar-color: var(--color-foreground);
-    scrollbar-width: thin;
-  }
+* {
+  scrollbar-color: var(--color-foreground);
+  scrollbar-width: thin;
 
-  a,
-  img,
-  label,
-  button,
-  ::placeholder {
-    @apply select-none;
+  &::selection {
+    @apply bg-foreground text-background-content;
   }
 }
 
+a,
+img,
+label,
+button,
+::placeholder {
+  @apply select-none;
+}
+
 .action-button {
-  @apply glass glass-surface flex size-10 cursor-pointer items-center justify-center rounded-full transition hover:opacity-50 active:scale-95 disabled:opacity-50;
+  @apply flex size-10 cursor-pointer items-center justify-center rounded-full border border-foreground/30 bg-transparent transition hover:opacity-90 active:scale-95 disabled:opacity-90;
 }

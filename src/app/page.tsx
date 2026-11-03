@@ -1,12 +1,8 @@
-// import Image from 'next/image'
-
 import tw from 'tailwind-styled-components'
 
 export default function HomePage() {
   return (
-    <main className='relative mt-4 mb-2 grid grow gap-2.5 px-1 md:grid-cols-4 lg:grid-cols-3'>
-      {/* <Image alt='' className='object-cover object-center' fill loading='eager' src='/images/background.webp' /> */}
-
+    <main className='relative mt-4 mb-2 grid grow gap-2.5 md:grid-cols-4 lg:grid-cols-3'>
       <section className='md:col-span-2 lg:col-span-1'>
         <Card>
           <h2>About</h2>
