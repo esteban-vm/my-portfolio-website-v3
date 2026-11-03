@@ -73,4 +73,4 @@ export default function HomePage() {
   )
 }
 
-const Card = tw.div`glass glass-surface glass-strength-5 [&_h2]:fl-text-lg/xl size-full rounded-2xl p-6`
+const Card = tw.div`[&_h2]:fl-text-lg/xl size-full rounded-2xl bg-background-content p-6`
