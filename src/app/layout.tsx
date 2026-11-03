@@ -3,9 +3,8 @@ import { ThemeProvider } from '@teispace/next-themes'
 import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
+import { LanguageButton, ThemeButton } from '@/components'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
-import { LanguageButton } from './language-button'
-import { ThemeButton } from './theme-button'
 import '@/styles/globals.css'
 
 export const instant = false
@@ -24,9 +23,9 @@ export const viewport: Viewport = {
 }
 
 export default async function RootLayout({ children }: LayoutProps<'/'>) {
+  const t = await getTranslations()
   const locale = await getLocale()
   const initialTheme = (await getTheme()) ?? ''
-  const t = await getTranslations()
 
   return (
     <html
