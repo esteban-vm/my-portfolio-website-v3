@@ -20,8 +20,8 @@
   --font-geist: var(--geist);
   --font-good-times: var(--good-times);
   --font-axis: var(--axis);
-  --animate-grid-move: grid-move 8s linear infinite;
   --color-background: var(--background);
+  --animate-grid-move: grid-move 8s linear infinite;
 
   @keyframes grid-move {
     from {
