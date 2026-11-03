@@ -1,8 +1,11 @@
+// import Image from 'next/image'
 import { Banner, Card } from 'open-glass-ui'
 
 export default function HomePage() {
   return (
     <main className='relative mt-4 mb-2 grid grow gap-2.5 px-1 md:grid-cols-4 lg:grid-cols-3'>
+      {/* <Image alt='' className='object-cover object-center' fill loading='eager' src='/images/background.webp' /> */}
+
       <div className='md:col-span-2 lg:col-span-1'>
         <Card className='size-full' eyebrow='Eye' footer='Footer' title='About'>
           <p className='fl-text-sm/base'>
@@ -26,9 +29,7 @@ export default function HomePage() {
       </div>
 
       <div className='md:col-span-2 lg:col-span-1'>
-        <div className='glass glass-surface glass-blur-4 glass-saturation-150 glass-brightness-110 glass-strength-5 rounded-xl p-6'>
-          Contact
-        </div>
+        <div className='glass glass-surface glass-strength-5 rounded-xl p-6'>Contact</div>
       </div>
 
       <div className='md:col-span-2 lg:col-span-2'>
@@ -56,6 +57,8 @@ export default function HomePage() {
             culpa nesciunt incidunt officia ex?
           </p>
         </Banner>
+
+        {/* <MyCanvas /> */}
       </div>
     </main>
   )
