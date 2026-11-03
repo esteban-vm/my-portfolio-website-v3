@@ -1,21 +1,23 @@
 'use client'
 
 import { useTheme } from '@teispace/next-themes'
-import { IconButton } from 'open-glass-ui'
 import { FaMoon, FaSun } from 'react-icons/fa'
 
 export function ThemeButton() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <IconButton
-      aria-label='foo'
+    <button
+      className='glass glass-surface group flex size-10 cursor-pointer items-center justify-center rounded-full transition active:scale-95'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       title='Cambiar tema'
       type='button'
-      variant='quiet'
     >
-      {theme === 'dark' ? <FaSun /> : <FaMoon />}
-    </IconButton>
+      {theme === 'dark' ? (
+        <FaSun className='group-hover:motion-safe:animate-pulse' />
+      ) : (
+        <FaMoon className='group-hover:motion-safe:animate-pulse' />
+      )}
+    </button>
   )
 }
