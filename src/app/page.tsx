@@ -29,7 +29,7 @@ export default function HomePage() {
       </div>
 
       <div className='md:col-span-2 lg:col-span-1'>
-        <div className='glass glass-surface glass-strength-5 rounded-xl p-6'>Contact</div>
+        <div className='glass glass-surface glass-strength-5 rounded-2xl p-6'>Contact</div>
       </div>
 
       <div className='md:col-span-2 lg:col-span-2'>
