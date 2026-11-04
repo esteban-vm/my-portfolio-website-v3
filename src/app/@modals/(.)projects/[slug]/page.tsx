@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ProjectModal } from '@/components'
+import { ProjectModal } from '@/components/projects'
 
 export const instant = false
 
