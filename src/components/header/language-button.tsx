@@ -1,12 +1,13 @@
 'use client'
 
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { IoLanguage } from 'react-icons/io5'
 import { changeLanguage } from '@/actions'
 
 export function LanguageButton() {
   const locale = useLocale()
+  const t = useTranslations('header')
   const { execute, isPending } = useAction(changeLanguage)
 
   const onLanguageChange = () => {
@@ -18,7 +19,7 @@ export function LanguageButton() {
       className='action-button'
       disabled={isPending}
       onClick={onLanguageChange}
-      title='Cambiar idioma'
+      title={t('language_button')}
       type='button'
     >
       <IoLanguage />

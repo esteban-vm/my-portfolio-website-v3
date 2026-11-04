@@ -1,3 +1,9 @@
 {
-  "test": "hello world"
+  "header": {
+    "language_button": "Switch to Spanish",
+    "theme_button": {
+      "dark": "Switch to dark theme",
+      "light": "Switch to light theme"
+    }
+  }
 }

@@ -1,3 +1,9 @@
 {
-  "test": "hola mundo"
+  "header": {
+    "language_button": "Cambiar a inglés",
+    "theme_button": {
+      "dark": "Cambiar a tema oscuro",
+      "light": "Cambiar a tema claro"
+    }
+  }
 }
