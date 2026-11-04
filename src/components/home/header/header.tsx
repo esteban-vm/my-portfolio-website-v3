@@ -9,7 +9,7 @@ export function Header() {
         className='flex aspect-square w-12 items-center justify-center rounded-xl border border-foreground/30 hover:opacity-90'
         href='/'
       >
-        <span className='align-top font-axis text-3xl'>E</span>
+        <span className='align-top text-3xl'>E</span>
       </Link>
       <div className='flex gap-1.5'>
         <LanguageButton />
