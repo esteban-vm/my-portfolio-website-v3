@@ -4,6 +4,7 @@ import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import { LanguageButton, ThemeButton } from '@/components'
+import { THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -40,6 +41,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
       <body className='relative h-full'>
         <ThemeProvider
           attribute='class'
+          cookieOptions={{ name: THEME_COOKIE }}
           defaultTheme='system'
           disableTransitionOnChange
           enableColorScheme={false}
@@ -47,6 +49,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           initialTheme={initialTheme}
           noScript
           storage='hybrid'
+          storageKey={THEME_STORAGE}
           themes={['light', 'dark']}
         >
           <NextIntlClientProvider>

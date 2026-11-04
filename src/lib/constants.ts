@@ -1,3 +1,7 @@
 // i18n
 export const LOCALES = ['en', 'es'] as const
-export const LOCALE_COOKIE = 'NEXT_LOCALE'
+export const LOCALE_COOKIE = 'MY_PORTFOLIO_LOCALE'
+
+// Theming
+export const THEME_STORAGE = 'MY_PORTFOLIO_THEME'
+export const THEME_COOKIE = 'MY_PORTFOLIO_THEME'
