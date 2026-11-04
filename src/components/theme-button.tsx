@@ -4,7 +4,7 @@ import { useTheme } from '@teispace/next-themes'
 import { FaMoon, FaSun } from 'react-icons/fa'
 
 export function ThemeButton() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, theme, setTheme } = useTheme()
 
   return (
     <button
@@ -13,7 +13,7 @@ export function ThemeButton() {
       title='Cambiar tema'
       type='button'
     >
-      {theme === 'dark' ? <FaSun /> : <FaMoon />}
+      {resolvedTheme === 'dark' ? <FaSun /> : <FaMoon />}
     </button>
   )
 }
