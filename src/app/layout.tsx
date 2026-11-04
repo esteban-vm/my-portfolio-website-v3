@@ -7,6 +7,7 @@ import { Header } from '@/components'
 import { THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
+import tw from 'tailwind-styled-components'
 
 export const instant = false
 
@@ -52,18 +53,20 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
           themes={['light', 'dark']}
         >
           <NextIntlClientProvider>
-            <div className='fixed inset-0 size-full overflow-auto bg-background text-foreground'>
-              <div className='relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist'>
+            <Background>
+              <Container>
                 <Header />
                 {children}
-                <footer className='mb-2 shrink-0 grow-0 rounded-2xl border border-foreground/30 text-center'>
-                  Footer
-                </footer>
-              </div>
-            </div>
+                <Footer>Footer</Footer>
+              </Container>
+            </Background>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
   )
 }
+
+const Background = tw.div`fixed inset-0 size-full overflow-auto bg-background text-foreground`
+const Container = tw.div`relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist`
+const Footer = tw.footer`mb-2 shrink-0 grow-0 rounded-2xl border border-foreground/30 text-center`
