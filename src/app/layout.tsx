@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
 import { Header } from '@/components'
-import { THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
+import { PROJECT_MODAL_ID, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Axis, Geist, GoodTimes } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -34,7 +34,7 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 }
 
-export default async function RootLayout({ children }: LayoutProps<'/'>) {
+export default async function RootLayout({ children, modals }: LayoutProps<'/'>) {
   const locale = await getLocale()
   const initialTheme = (await getTheme()) ?? ''
 
@@ -67,8 +67,10 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
               <Container>
                 <Header />
                 {children}
+                {modals}
                 <Footer>Footer</Footer>
               </Container>
+              <div id={PROJECT_MODAL_ID} />
             </Background>
           </NextIntlClientProvider>
         </ThemeProvider>
