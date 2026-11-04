@@ -46,5 +46,9 @@ button,
 }
 
 .action-button {
-  @apply flex size-10 cursor-pointer items-center justify-center rounded-full border border-foreground/30 bg-transparent transition hover:opacity-90 active:scale-95 disabled:opacity-90;
+  @apply flex size-12 cursor-pointer items-center justify-center rounded-full border border-foreground/30 bg-transparent transition hover:opacity-90 active:scale-95 disabled:opacity-90;
+
+  & svg {
+    @apply size-2/5;
+  }
 }
