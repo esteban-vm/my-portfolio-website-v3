@@ -21,8 +21,6 @@
 
 @theme {
   --font-geist: var(--geist);
-  --font-good-times: var(--good-times);
-  --font-axis: var(--axis);
   --color-background: var(--background);
   --color-background-content: var(--background-content);
   --color-foreground: var(--foreground);
