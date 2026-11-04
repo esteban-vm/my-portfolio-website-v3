@@ -1,4 +1,17 @@
 {
+  "metadata": {
+    "title": {
+      "default": "My portfolio | Home",
+      "template": "My portfolio | %s"
+    },
+    "description": "My portfolio website",
+    "keywords": {
+      "1": "Front-End Developer",
+      "2": "Web Design",
+      "3": "Next.js",
+      "4": "React"
+    }
+  },
   "header": {
     "language_button": "Switch to Spanish",
     "theme_button": {

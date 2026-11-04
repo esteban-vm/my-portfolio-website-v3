@@ -1,4 +1,17 @@
 {
+  "metadata": {
+    "title": {
+      "default": "Mi portafolio | Inicio",
+      "template": "Mi portafolio | %s"
+    },
+    "description": "Mi portafolio web",
+    "keywords": {
+      "1": "Desarrollador Front-End",
+      "2": "Diseño Web",
+      "3": "Next.js",
+      "4": "React"
+    }
+  },
   "header": {
     "language_button": "Cambiar a inglés",
     "theme_button": {
