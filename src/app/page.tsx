@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import tw from 'tailwind-styled-components'
 
 export default function HomePage() {
@@ -52,17 +53,9 @@ export default function HomePage() {
       <section className='md:col-span-full'>
         <Card>
           <h2>Projects</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusamus et cumque eum harum sunt. Adipisci
-            quibusdam qui magnam est, dolore, iure labore non placeat itaque laboriosam ipsa doloribus optio accusantium
-            repudiandae laudantium ab sapiente aut. Nobis nesciunt, nemo deleniti consectetur exercitationem magnam
-            quidem numquam veniam inventore nam asperiores dolore itaque sint molestias? Accusantium quam harum porro
-            impedit error aliquid enim saepe tempore nulla obcaecati exercitationem soluta in ea illo unde dolores
-            aliquam totam accusamus repudiandae, cumque rem cupiditate! Mollitia laborum voluptate aspernatur reiciendis
-            corrupti rerum incidunt ut suscipit, amet labore repellendus autem ipsam quam, ducimus nobis delectus magni
-            ipsum, fugit et ipsa dignissimos eligendi. Sit, temporibus illum. Omnis optio in rem aliquid dolorum fugiat
-            culpa nesciunt incidunt officia ex?
-          </p>
+          <div>
+            <Link href='/projects/1'>Project 1</Link>
+          </div>
         </Card>
       </section>
     </main>
