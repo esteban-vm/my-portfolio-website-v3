@@ -69,4 +69,4 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
 
 const Background = tw.div`fixed inset-0 size-full overflow-auto bg-background text-foreground`
 const Container = tw.div`relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist`
-const Footer = tw.footer`mb-2 shrink-0 grow-0 rounded-2xl border border-foreground/30 text-center`
+const Footer = tw.footer`mb-2 shrink-0 grow-0 border-foreground/30 border-t text-center`
