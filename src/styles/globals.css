@@ -21,6 +21,7 @@
 
 @theme {
   --font-geist: var(--geist);
+  --font-wellfleet: var(--wellfleet);
   --color-background: var(--background);
   --color-background-content: var(--background-content);
   --color-foreground: var(--foreground);

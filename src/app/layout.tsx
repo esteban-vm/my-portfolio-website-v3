@@ -6,7 +6,7 @@ import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
 import { Header } from '@/components/home'
 import { PROJECT_MODAL_ID, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
-import { Geist } from '@/lib/fonts'
+import { Geist, Wellfleet } from '@/lib/fonts'
 import '@/styles/globals.css'
 
 export const instant = false
@@ -39,7 +39,12 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
   const initialTheme = (await getTheme()) ?? ''
 
   return (
-    <html className={`${Geist.variable} h-full antialiased`} dir='ltr' lang={locale} suppressHydrationWarning>
+    <html
+      className={`${Geist.variable} ${Wellfleet.variable} h-full antialiased`}
+      dir='ltr'
+      lang={locale}
+      suppressHydrationWarning
+    >
       <head>
         <script {...getThemeScriptProps({ attribute: 'class', initialTheme })} />
       </head>
