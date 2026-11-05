@@ -13,8 +13,8 @@ export function ProjectModal({ slug }: { slug: string }) {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
-    if (!dialogRef.current) return
     const dialog = dialogRef.current
+    if (!dialog) return
     if (!dialog.open) dialog.showModal()
   }, [])
 
