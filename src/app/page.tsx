@@ -4,7 +4,8 @@ import tw from 'tailwind-styled-components'
 export default function HomePage() {
   return (
     <main className='relative mt-4 mb-2 grid grow gap-2.5 md:grid-cols-4 lg:grid-cols-3'>
-      <section className='md:col-span-2 lg:col-span-1'>
+      {/* About */}
+      <section className='order-first md:col-span-2 lg:col-span-1'>
         <Card>
           <h2>About</h2>
           <p>
@@ -16,7 +17,8 @@ export default function HomePage() {
         </Card>
       </section>
 
-      <section className='md:col-span-2 lg:col-span-2'>
+      {/* CTA */}
+      <section className='order-2 md:col-span-2'>
         <Card>
           <h2>CTA</h2>
           <p>
@@ -28,7 +30,8 @@ export default function HomePage() {
         </Card>
       </section>
 
-      <section className='md:col-span-2 lg:col-span-1'>
+      {/* Contact */}
+      <section className='order-3 md:col-span-2 lg:col-span-1 portrait:order-4'>
         <Card>
           <h2>Contact</h2>
           <p>
@@ -38,7 +41,8 @@ export default function HomePage() {
         </Card>
       </section>
 
-      <section className='md:col-span-2 lg:col-span-2'>
+      {/* Tech */}
+      <section className='order-4 md:col-span-2 portrait:order-last'>
         <Card>
           <h2>Tech</h2>
           <p>
@@ -50,7 +54,8 @@ export default function HomePage() {
         </Card>
       </section>
 
-      <section className='md:col-span-full'>
+      {/* Projects */}
+      <section className='order-last md:col-span-full portrait:order-3'>
         <Card>
           <h2>Projects</h2>
           <div>
