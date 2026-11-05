@@ -35,4 +35,4 @@ export function ProjectModal({ slug }: { slug: string }) {
   )
 }
 
-const Dialog = tw.dialog`-translate-1/2 fade-in glass glass-surface top-1/2 left-1/2 flex w-[calc(100%-var(--spacing)*4)] max-w-lg animate-in flex-col items-center justify-center gap-3 rounded-2xl p-6 text-foreground duration-1000 backdrop:bg-background/80`
+const Dialog = tw.dialog`-translate-1/2 fade-in glass glass-surface top-1/2 left-1/2 flex w-[calc(100%-var(--spacing)*4)] max-w-lg animate-in flex-col items-center justify-center gap-3 rounded-2xl fill-mode-forwards p-6 text-foreground duration-1000 backdrop:bg-background/80`
