@@ -54,7 +54,6 @@ export function DateTime() {
 
   return (
     <div className='flex size-full flex-col items-center justify-center'>
-      <Image alt={text} className='contrast-125' height={64} src={icon} width={64} />
       <time className='font-semibold text-3xl' dateTime={time}>
         {time}
       </time>
@@ -64,7 +63,9 @@ export function DateTime() {
         {country}
       </p>
       <p>
-        {temp_c.toLocaleString(locale, { style: 'unit', unit: 'celsius' })} · {text}
+        {temp_c.toLocaleString(locale, { style: 'unit', unit: 'celsius' })} ·
+        <Image alt={text} className='inline size-6 align-text-bottom contrast-125' height={2} src={icon} width={2} />
+        {text}
       </p>
     </div>
   )
