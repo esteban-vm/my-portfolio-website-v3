@@ -70,7 +70,7 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
                 {modals}
                 <Footer>
                   <small>© Esteban V.M.</small>
-                  <small className='float-end'>Built with Next.js & Tailwind</small>
+                  <small>Built with Next.js & Tailwind</small>
                 </Footer>
               </Container>
               <div id={PROJECT_MODAL_ID} />
@@ -84,4 +84,4 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
 
 const Background = tw.div`fixed inset-0 size-full overflow-auto bg-background text-foreground`
 const Container = tw.div`relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist`
-const Footer = tw.footer`mb-2 shrink-0 grow-0 px-3 font-wellfleet text-foreground/50`
+const Footer = tw.footer`mb-2 flex shrink-0 grow-0 justify-between px-3 font-wellfleet text-foreground/50`
