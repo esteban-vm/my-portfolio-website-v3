@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <main className='relative mt-4 mb-2 grid grow gap-2.5 md:grid-cols-4 lg:grid-cols-3'>
       {/* About */}
-      <section className='order-first md:col-span-2 lg:col-span-1 portrait:order-2'>
+      <section className='not-md:order-2 order-first md:col-span-2 lg:col-span-1'>
         <Card>
           <h2>About</h2>
           <p>
@@ -19,7 +19,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className='order-2 md:col-span-2 portrait:order-3'>
+      <section className='not-md:order-3 order-2 md:col-span-2'>
         <Card>
           <h2>CTA</h2>
           <p>
@@ -32,14 +32,14 @@ export default function HomePage() {
       </section>
 
       {/* DateTime */}
-      <section className='order-3 md:col-span-2 lg:col-span-1 portrait:order-first'>
+      <section className='not-md:order-first order-3 md:col-span-2 lg:col-span-1'>
         <Card>
           <DateTime />
         </Card>
       </section>
 
       {/* Contact */}
-      <section className='order-4 md:col-span-2 portrait:order-last'>
+      <section className='not-md:order-last order-4 md:col-span-2'>
         <Card>
           <h2>Contact</h2>
           <p>
@@ -52,7 +52,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects */}
-      <section className='order-last md:col-span-full portrait:order-4'>
+      <section className='not-md:order-4 order-last md:col-span-full'>
         <Card>
           <h2>Projects</h2>
           <div>
