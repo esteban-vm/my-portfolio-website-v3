@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import tw from 'tailwind-styled-components'
+import { DateTime } from '@/components/home'
 
 export default function HomePage() {
   return (
     <main className='relative mt-4 mb-2 grid grow gap-2.5 md:grid-cols-4 lg:grid-cols-3'>
       {/* About */}
-      <section className='order-first md:col-span-2 lg:col-span-1'>
+      <section className='order-first md:col-span-2 lg:col-span-1 portrait:order-2'>
         <Card>
           <h2>About</h2>
           <p>
@@ -18,7 +19,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className='order-2 md:col-span-2'>
+      <section className='order-2 md:col-span-2 portrait:order-3'>
         <Card>
           <h2>CTA</h2>
           <p>
@@ -30,21 +31,17 @@ export default function HomePage() {
         </Card>
       </section>
 
-      {/* Contact */}
-      <section className='order-3 md:col-span-2 lg:col-span-1 portrait:order-4'>
+      {/* DateTime */}
+      <section className='order-3 md:col-span-2 lg:col-span-1 portrait:order-first'>
         <Card>
-          <h2>Contact</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi quod adipisci unde blanditiis dolor
-            non. Nisi, modi quos? Suscipit.
-          </p>
+          <DateTime />
         </Card>
       </section>
 
-      {/* Tech */}
+      {/* Contact */}
       <section className='order-4 md:col-span-2 portrait:order-last'>
         <Card>
-          <h2>Tech</h2>
+          <h2>Contact</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur reprehenderit qui est dolore
             consectetur, dolorum tenetur dignissimos in quos quaerat. Tempore repellat doloremque sapiente tempora eius
@@ -55,7 +52,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects */}
-      <section className='order-last md:col-span-full portrait:order-3'>
+      <section className='order-last md:col-span-full portrait:order-4'>
         <Card>
           <h2>Projects</h2>
           <div>
