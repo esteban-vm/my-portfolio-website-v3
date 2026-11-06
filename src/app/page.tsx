@@ -4,7 +4,7 @@ import { DateTime } from '@/components/home'
 
 export default function HomePage() {
   return (
-    <main className='relative mt-4 mb-2 grid grow gap-2.5 md:grid-cols-4 lg:grid-cols-3'>
+    <main className='relative mt-4 mb-2 grid grow gap-2 md:grid-cols-4 lg:grid-cols-3'>
       {/* About */}
       <section className='not-md:order-2 order-first md:col-span-2 lg:col-span-1'>
         <Card>
