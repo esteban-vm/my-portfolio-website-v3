@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
 import { Footer, Header } from '@/components/home'
-import { PROJECT_MODAL_ID, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
+import { CONTAINER_ID, PROJECT_MODAL_ID, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Geist, Wellfleet } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -64,7 +64,7 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
         >
           <NextIntlClientProvider>
             <Background>
-              <Container>
+              <Container id={CONTAINER_ID}>
                 <Header />
                 {children}
                 {modals}
