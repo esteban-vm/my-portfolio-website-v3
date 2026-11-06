@@ -57,17 +57,17 @@ export default function HomePage() {
           <h2>Projects</h2>
           <div>
             <p>
-              <Link className='hover:opacity-80' href='/projects/1'>
+              <Link className='hover:opacity-80' href='/projects/1' scroll={false}>
                 Project 1
               </Link>
             </p>
             <p>
-              <Link className='hover:opacity-80' href='/projects/2'>
+              <Link className='hover:opacity-80' href='/projects/2' scroll={false}>
                 Project 2
               </Link>
             </p>
             <p>
-              <Link className='hover:opacity-80' href='/projects/3'>
+              <Link className='hover:opacity-80' href='/projects/3' scroll={false}>
                 Project 3
               </Link>
             </p>
