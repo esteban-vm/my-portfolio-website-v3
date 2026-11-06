@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { use, useEffect, useRef } from 'react'
 import { browser, createPortal } from 'react-dom'
 import tw from 'tailwind-styled-components'
-import { PROJECT_MODAL_ID } from '@/lib/constants'
+import { MODAL_ROOT_ID } from '@/lib/constants'
 
 export function ProjectModal({ slug }: { slug: string }) {
   use(browser())
@@ -31,7 +31,7 @@ export function ProjectModal({ slug }: { slug: string }) {
         </button>
       </form>
     </Dialog>,
-    document.getElementById(PROJECT_MODAL_ID)!
+    document.getElementById(MODAL_ROOT_ID)!
   )
 }
 
