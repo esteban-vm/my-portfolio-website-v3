@@ -19,24 +19,26 @@ export function DateTime() {
 
   useEffect(() => {
     if (!result?.data) return
+    const tz = result.data.location.tz_id
 
     const timeFormat = new Intl.DateTimeFormat(locale, {
-      timeZone: result.data.location.tz_id,
+      timeZone: tz,
       hour: '2-digit',
       minute: '2-digit',
       hour12: false,
     })
 
     const dateFormat = new Intl.DateTimeFormat(locale, {
-      timeZone: result.data.location.tz_id,
+      timeZone: tz,
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
     })
 
     const updateTime = () => {
-      setTime(timeFormat.format(new Date()))
-      setDate(dateFormat.format(new Date()))
+      const date = new Date()
+      setTime(timeFormat.format(date))
+      setDate(dateFormat.format(date))
     }
 
     updateTime()
@@ -52,13 +54,14 @@ export function DateTime() {
 
   return (
     <div className='flex size-full flex-col items-center justify-center'>
-      <Image alt='' height={64} src={icon} width={64} />
+      <Image alt={text} className='contrast-125' height={64} src={icon} width={64} />
       <time className='font-semibold text-3xl' dateTime={time}>
         {time}
       </time>
       <time dateTime={date}>{date}</time>
       <p>
-        <FaLocationDot className='inline align-baseline' /> {locale === 'es' ? 'Asunción' : name}, {country}
+        <FaLocationDot className='inline align-baseline text-red-500' /> {locale === 'es' ? 'Asunción' : name},{' '}
+        {country}
       </p>
       <p>
         {temp_c.toLocaleString(locale, { style: 'unit', unit: 'celsius' })} · {text}
