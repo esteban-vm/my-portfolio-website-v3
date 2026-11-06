@@ -1,10 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import { useLocale } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { useEffect, useState } from 'react'
-import { FaLocationDot, FaTemperatureHalf } from 'react-icons/fa6'
+import { FaLocationDot } from 'react-icons/fa6'
 import { getWeather } from '@/actions'
 
 export function DateTime() {
@@ -49,29 +48,23 @@ export function DateTime() {
   if (isPending || !result?.data) return null
 
   const { temp_c } = result.data.current
-  const { text, icon } = result.data.current.condition
+  const { text } = result.data.current.condition
   const { name, country } = result.data.location
 
   return (
     <div className='flex size-full flex-col items-center justify-center'>
+      <FaLocationDot className='size-10 text-red-500' />
       <time className='text-3xl' dateTime={time}>
         {time}
       </time>
       <time dateTime={date}>{date}</time>
-      <div className='flex items-center justify-center gap-1 text-sm'>
-        <FaLocationDot className='inline align-baseline text-red-500' />
-        <span>
-          {locale === 'es' ? 'Asunción' : name}, {country}
-        </span>
-      </div>
-      <div className='flex items-center justify-center gap-1 text-sm'>
-        <FaTemperatureHalf className='inline align-baseline text-yellow-500' />
-        <span>{temp_c.toLocaleString(locale, { style: 'unit', unit: 'celsius' })}</span>
-      </div>
-      <div className='flex items-center justify-center gap-1 text-sm' title={text}>
-        <Image alt={text} className='inline size-4 align-text-bottom contrast-125' height={2} src={icon} width={2} />
-        <span className='line-clamp-1 max-w-3/4'>{text}</span>
-      </div>
+      <span className='text-sm'>{temp_c.toLocaleString(locale, { style: 'unit', unit: 'celsius' })}</span>
+      <span className='line-clamp-1 text-sm' title={text}>
+        {text}
+      </span>
+      <span className='text-sm'>
+        {locale === 'es' ? 'Asunción' : name}, {country}
+      </span>
     </div>
   )
 }
