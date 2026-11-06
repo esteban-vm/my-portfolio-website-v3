@@ -78,4 +78,4 @@ export default function HomePage() {
   )
 }
 
-const Card = tw.div`[&_h2]:fl-text-lg/2xl size-full rounded-2xl bg-background-content p-6 [&_h2]:font-wellfleet`
+const Card = tw.div`size-full rounded-2xl bg-background-content p-6 [&_h2]:font-wellfleet [&_h2]:text-2xl`
