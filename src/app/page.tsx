@@ -56,7 +56,21 @@ export default function HomePage() {
         <Card>
           <h2>Projects</h2>
           <div>
-            <Link href='/projects/1'>Project 1</Link>
+            <p>
+              <Link className='hover:opacity-80' href='/projects/1'>
+                Project 1
+              </Link>
+            </p>
+            <p>
+              <Link className='hover:opacity-80' href='/projects/2'>
+                Project 2
+              </Link>
+            </p>
+            <p>
+              <Link className='hover:opacity-80' href='/projects/3'>
+                Project 3
+              </Link>
+            </p>
           </div>
         </Card>
       </section>
@@ -64,4 +78,4 @@ export default function HomePage() {
   )
 }
 
-const Card = tw.div`[&_h2]:fl-text-lg/xl size-full rounded-2xl bg-background-content p-6`
+const Card = tw.div`[&_h2]:fl-text-lg/2xl size-full rounded-2xl bg-background-content p-6 [&_h2]:font-wellfleet`
