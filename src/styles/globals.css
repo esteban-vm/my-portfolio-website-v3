@@ -3,8 +3,6 @@
 @import "tw-glass";
 @import "@teispace/next-themes/tailwind.css";
 
-@plugin "fluid-tailwindcss";
-
 :root {
   --background: #f7f7f7;
   --background-content: #ffffff;
