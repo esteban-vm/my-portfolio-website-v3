@@ -4,7 +4,7 @@ import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
-import { Header } from '@/components/home'
+import { Footer, Header } from '@/components/home'
 import { PROJECT_MODAL_ID, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Geist, Wellfleet } from '@/lib/fonts'
 import '@/styles/globals.css'
@@ -68,10 +68,7 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
                 <Header />
                 {children}
                 {modals}
-                <Footer>
-                  <small>© Esteban V.M.</small>
-                  <small>Built with Next.js & Tailwind</small>
-                </Footer>
+                <Footer />
               </Container>
               <div id={PROJECT_MODAL_ID} />
             </Background>
@@ -84,4 +81,3 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
 
 const Background = tw.div`fixed inset-0 size-full overflow-auto bg-background text-foreground`
 const Container = tw.div`relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist`
-const Footer = tw.footer`mb-2 flex shrink-0 grow-0 justify-between px-3 font-wellfleet text-foreground/50`
