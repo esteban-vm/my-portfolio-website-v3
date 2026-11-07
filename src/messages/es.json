@@ -18,5 +18,9 @@
       "dark": "Cambiar a tema oscuro",
       "light": "Cambiar a tema claro"
     }
+  },
+  "footer": {
+    "text": "Hecha con Next.js y Tailwind",
+    "scroll_button": "Volver arriba"
   }
 }
