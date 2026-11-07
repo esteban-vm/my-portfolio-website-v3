@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
 import { Footer, Header } from '@/components/home'
-import { CONTAINER_ID, MODAL_ROOT_ID, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
+import { CONTAINER_ID, MODAL_ROOT_ID, NAME, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Geist, Wellfleet } from '@/lib/fonts'
 import '@/styles/globals.css'
 
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: t('description'),
     keywords: [t('keywords.1'), t('keywords.2'), t('keywords.3'), t('keywords.4')],
-    authors: { name: 'Esteban V.M.', url: 'https://github.com/esteban-vm' },
+    authors: { name: NAME, url: 'https://github.com/esteban-vm' },
     generator: 'Next.js',
   }
 }
