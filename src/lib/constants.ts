@@ -9,3 +9,6 @@ export const THEME_COOKIE = 'MY_PORTFOLIO_THEME'
 // UI
 export const MODAL_ROOT_ID = 'modal-root'
 export const CONTAINER_ID = 'container'
+
+// Data
+export const NAME = 'Esteban V.M.'
