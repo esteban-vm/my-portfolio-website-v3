@@ -9,11 +9,7 @@ export async function AboutMe() {
       <h1 className='font-bold font-wellfleet text-3xl'>{NAME}</h1>
       <h2 className='line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase'>{t('subtitle')}</h2>
       <br />
-      {/* <hr className='mb-4 border-spacing-0.5 border-foreground/50' /> */}
-      {/* <div className='grow'/> */}
-      {/* <div className='  shrink border border-amber-500'> */}
       <p className='text-foreground/70 leading-5'>{t('text', { name: NAME })}</p>
-      {/* </div> */}
     </div>
   )
 }
