@@ -3,7 +3,9 @@
 import { useLocale } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { useEffect, useState } from 'react'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { FaLocationDot } from 'react-icons/fa6'
+import tw from 'tailwind-styled-components'
 import { getWeather } from '@/actions'
 
 export function DateTime() {
@@ -45,14 +47,22 @@ export function DateTime() {
     return () => clearInterval(interval)
   }, [result?.data, locale])
 
-  if (isPending || !result?.data) return null
+  if (isPending) {
+    return (
+      <Wrapper>
+        <AiOutlineLoading3Quarters className='size-12 animate-spin' />
+      </Wrapper>
+    )
+  }
+
+  if (!result?.data) return null
 
   const { temp_c } = result.data.current
   const { text } = result.data.current.condition
   const { name, country } = result.data.location
 
   return (
-    <div className='flex size-full flex-col items-center justify-center'>
+    <Wrapper>
       <FaLocationDot className='size-10 text-red-500' />
       <time className='text-3xl' dateTime={time}>
         {time}
@@ -65,6 +75,8 @@ export function DateTime() {
       <span className='text-sm'>
         {locale === 'es' ? 'Asunción' : name}, {country}
       </span>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = tw.div`flex size-full flex-col items-center justify-center`
