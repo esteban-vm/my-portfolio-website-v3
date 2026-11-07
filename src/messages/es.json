@@ -22,5 +22,18 @@
   "footer": {
     "text": "Hecha con Next.js y Tailwind",
     "scroll_button": "Volver arriba"
+  },
+  "about": {
+    "subtitle": "Desarrollador Front-End",
+    "text": "Hola👋, me llamo {name} y soy un desarrollador web enfocado en el Front-End que disfruta de traer ideas a la realidad a través del código. Me guían las creatividad, la curiosidad y un deseo constante de aprender. Creo en experiencias digitales que conectan, cuentan una historia y hacen que la tecnología se sienta más próxima y humana. Mi meta es combinar estética y funcionalidad para crear proyectos que realmente destaquen."
+  },
+  "cta": {
+    "title": "¡Bienvenido/a a mi portafolio web!"
+  },
+  "contact": {
+    "title": "Contacto"
+  },
+  "projects": {
+    "title": "Proyectos"
   }
 }
