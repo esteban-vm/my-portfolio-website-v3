@@ -12,9 +12,7 @@ export async function AboutMe() {
       <p className='text-foreground/70 leading-5'>
         {t.rich('text', {
           name: NAME.slice(0, NAME.indexOf(' ')),
-          important(chunks) {
-            return <span className='font-semibold'>{chunks}</span>
-          },
+          important: (chunks) => <span className='font-semibold'>{chunks}</span>,
         })}
       </p>
     </div>
