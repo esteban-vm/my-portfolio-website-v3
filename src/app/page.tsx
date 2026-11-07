@@ -1,27 +1,28 @@
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
 import { DateTime } from '@/components/home'
+import { NAME } from '@/lib/constants'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const t = await getTranslations()
+
   return (
     <main className='relative mt-4 mb-2 grid grow gap-2 md:grid-cols-4 lg:grid-cols-3'>
       {/* About */}
       <section className='not-md:order-2 order-first md:col-span-2 lg:col-span-1'>
-        <Card>
-          <h2>About</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatum ex fugiat dolor dolores in odio
-            possimus a. Id fugiat architecto pariatur, ullam quod cum voluptatibus officia placeat, unde veritatis culpa
-            delectus hic asperiores quibusdam eos ratione fugit quos ea dicta libero ipsum error illum sapiente
-            excepturi! Molestiae, aspernatur maiores!
-          </p>
-        </Card>
+        <div className='flex size-full flex-col justify-center rounded-2xl bg-background-content p-6 light:shadow-foreground/10 light:shadow-sm'>
+          <h1 className='font-bold font-wellfleet text-3xl'>{NAME}</h1>
+          <h2 className='font-wellfleet text-foreground/80 text-xl uppercase'>{t('about.subtitle')}</h2>
+          <hr className='mb-4 border-spacing-0.5 border-foreground/50' />
+          <p className='text-foreground/70 leading-5'>{t('about.text', { name: NAME })}</p>
+        </div>
       </section>
 
       {/* CTA */}
       <section className='not-md:order-3 order-2 md:col-span-2'>
         <Card>
-          <h2>CTA</h2>
+          <h2>{t('cta.title')}</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum vel reprehenderit a, facere rerum
             cumque eos, unde cupiditate hic repudiandae, eveniet laborum aperiam sequi beatae quisquam corporis quos!
@@ -41,7 +42,7 @@ export default function HomePage() {
       {/* Contact */}
       <section className='not-md:order-last order-4 md:col-span-2'>
         <Card>
-          <h2>Contact</h2>
+          <h2>{t('contact.title')}</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur reprehenderit qui est dolore
             consectetur, dolorum tenetur dignissimos in quos quaerat. Tempore repellat doloremque sapiente tempora eius
@@ -54,7 +55,7 @@ export default function HomePage() {
       {/* Projects */}
       <section className='not-md:order-4 order-last md:col-span-full'>
         <Card>
-          <h2>Projects</h2>
+          <h2>{t('projects.title')}</h2>
           <div>
             <p>
               <Link className='text-sky-500 hover:opacity-80' href='/projects/1' scroll={false}>
