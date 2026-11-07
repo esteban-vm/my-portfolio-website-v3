@@ -1,22 +1,16 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
-import { DateTime } from '@/components/home'
-import { NAME } from '@/lib/constants'
+import { AboutMe, DateTime } from '@/components/home'
 
 export default async function HomePage() {
   const t = await getTranslations()
 
   return (
     <main className='relative mt-4 mb-2 grid grow gap-2 md:grid-cols-4 lg:grid-cols-3'>
-      {/* About */}
+      {/* About Me */}
       <section className='not-md:order-2 order-first md:col-span-2 lg:col-span-1'>
-        <div className='flex size-full flex-col justify-center rounded-2xl bg-background-content p-6 light:shadow-foreground/10 light:shadow-sm'>
-          <h1 className='font-bold font-wellfleet text-3xl'>{NAME}</h1>
-          <h2 className='font-wellfleet text-foreground/80 text-xl uppercase'>{t('about.subtitle')}</h2>
-          <hr className='mb-4 border-spacing-0.5 border-foreground/50' />
-          <p className='text-foreground/70 leading-5'>{t('about.text', { name: NAME })}</p>
-        </div>
+        <AboutMe />
       </section>
 
       {/* CTA */}
