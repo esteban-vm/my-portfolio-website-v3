@@ -73,4 +73,4 @@ export default async function HomePage() {
   )
 }
 
-const Card = tw.div`size-full rounded-2xl bg-background-content p-6 light:shadow-foreground/10 light:shadow-sm [&_h2]:font-wellfleet [&_h2]:text-2xl`
+const Card = tw.div`size-full rounded-2xl bg-background-content p-6 light:shadow-foreground/10 light:shadow-sm [&_h2]:font-wellfleet [&_h2]:text-2xl [&_p]:text-foreground/70 [&_p]:leading-5`
