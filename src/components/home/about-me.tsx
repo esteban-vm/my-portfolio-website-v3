@@ -9,7 +9,9 @@ export async function AboutMe() {
       <h1 className='font-bold font-wellfleet text-3xl'>{NAME}</h1>
       <h2 className='line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase'>{t('subtitle')}</h2>
       <br />
-      <p className='text-foreground/70 leading-5'>{t('text', { name: NAME })}</p>
+      <p className='text-foreground/70 leading-5'>
+        {t.rich('text', { name: NAME, important: (chunks) => <span className='font-semibold'>{chunks}</span> })}
+      </p>
     </div>
   )
 }
