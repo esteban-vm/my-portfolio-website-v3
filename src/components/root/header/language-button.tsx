@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { IoLanguage } from 'react-icons/io5'
 import { changeLanguage } from '@/actions'
-import { ActionButton } from '@/components/shared'
+import { ActionButton } from '@/styles/styled'
 
 export function LanguageButton() {
   const locale = useLocale()
