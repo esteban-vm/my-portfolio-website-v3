@@ -18,8 +18,20 @@ export async function ContactMe() {
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
         <Subtitle className='mt-1'>Redes profesionales</Subtitle>
         <div className='flex gap-1'>
-          <SocialLink className='text-black' href='https://github.com/esteban-vm' icon={FaSquareGithub} />
-          <SocialLink className='text-[#0967C2]' href='https://www.linkedin.com/in/webdev-esteban/' icon={FaLinkedin} />
+          <SocialLink
+            className='text-black'
+            href='https://github.com/esteban-vm'
+            icon={FaSquareGithub}
+            subtitle='@esteban-vm'
+            title='GitHub'
+          />
+          <SocialLink
+            className='text-[#0967C2]'
+            href='https://www.linkedin.com/in/webdev-esteban/'
+            icon={FaLinkedin}
+            subtitle='in/webdev-esteban'
+            title='LinkedIn'
+          />
         </div>
         <Subtitle className='mt-1'>Estado</Subtitle>
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
@@ -29,12 +41,14 @@ export async function ContactMe() {
 }
 
 interface SocialLinkProps {
+  title: string
+  subtitle: string
   href: string
   className: string
   icon: IconType
 }
 
-function SocialLink({ href, className, icon: Icon }: SocialLinkProps) {
+function SocialLink({ title, subtitle, href, className, icon: Icon }: SocialLinkProps) {
   return (
     <a
       className='flex w-1/2 items-center gap-1.5 rounded-lg border border-foreground/30 px-3 py-2 hover:opacity-90'
@@ -44,8 +58,8 @@ function SocialLink({ href, className, icon: Icon }: SocialLinkProps) {
     >
       <Icon className={cn('size-8 shrink-0 dark:rounded-xs dark:bg-white', className)} />
       <div className='grow'>
-        <p className='font-bold text-sm'>GitHub</p>
-        <p className='line-clamp-1 text-current/60 text-xs'>@esteban-vm</p>
+        <p className='font-bold text-sm'>{title}</p>
+        <p className='line-clamp-1 text-current/60 text-xs'>{subtitle}</p>
       </div>
       <FaExternalLinkAlt className='size-4 shrink-0 text-current/60' />
     </a>
