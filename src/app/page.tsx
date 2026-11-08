@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
-import { AboutMe, DateTime } from '@/components/home'
+import { AboutMe, ContactMe, DateTime } from '@/components/home'
 
 export default async function HomePage() {
   const t = await getTranslations()
@@ -26,24 +26,16 @@ export default async function HomePage() {
         </Card>
       </section>
 
-      {/* DateTime */}
+      {/* Date Time */}
       <section className='not-md:order-first order-3 md:col-span-2 lg:col-span-1'>
         <Card>
           <DateTime />
         </Card>
       </section>
 
-      {/* Contact */}
+      {/* Contact Me */}
       <section className='not-md:order-last order-4 md:col-span-2'>
-        <Card>
-          <h2>{t('contact.title')}</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur reprehenderit qui est dolore
-            consectetur, dolorum tenetur dignissimos in quos quaerat. Tempore repellat doloremque sapiente tempora eius
-            molestias inventore, minus ad voluptas nemo? Soluta, autem, sapiente voluptatem unde magni ex consectetur
-            consequatur nemo eligendi velit quam?
-          </p>
-        </Card>
+        <ContactMe />
       </section>
 
       {/* Projects */}
