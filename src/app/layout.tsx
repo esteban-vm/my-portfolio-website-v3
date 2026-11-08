@@ -7,7 +7,7 @@ import tw from 'tailwind-styled-components'
 import { Footer, Header } from '@/components/root'
 import { CONTAINER_ID, MODAL_ROOT_ID, NAME, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Geist, Wellfleet } from '@/lib/fonts'
-import '@/styles/globals.css'
+import '@/styles/css/globals.css'
 
 export const instant = false
 
