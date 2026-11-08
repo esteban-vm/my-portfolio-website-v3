@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useAction } from 'next-safe-action/hooks'
 import { IoLanguage } from 'react-icons/io5'
 import { changeLanguage } from '@/actions'
-import { ActionButton } from '@/styles/styled'
+import { GlassButton } from '@/styles/styled'
 
 export function LanguageButton() {
   const locale = useLocale()
@@ -16,8 +16,8 @@ export function LanguageButton() {
   }
 
   return (
-    <ActionButton disabled={isPending} onClick={onLanguageChange} title={t('language_button')} type='button'>
+    <GlassButton disabled={isPending} onClick={onLanguageChange} title={t('language_button')} type='button'>
       <IoLanguage />
-    </ActionButton>
+    </GlassButton>
   )
 }

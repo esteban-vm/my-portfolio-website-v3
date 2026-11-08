@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { AboutMe, ContactMe, DateTime } from '@/components/home'
-import { HomeCard } from '@/styles/styled'
+import { GridCard } from '@/styles/styled'
 
 export default async function HomePage() {
   const t = await getTranslations()
@@ -15,7 +15,7 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className='not-md:order-3 order-2 md:col-span-2'>
-        <HomeCard>
+        <GridCard>
           <h2 className='font-wellfleet text-2xl'>{t('cta.title')}</h2>
           <p className='text-foreground/70 leading-5'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum vel reprehenderit a, facere rerum
@@ -23,14 +23,14 @@ export default async function HomePage() {
             Commodi aliquid, ullam eaque culpa consequatur quo provident esse ad modi quod sapiente et dolores corrupti
             quaerat laborum fuga?
           </p>
-        </HomeCard>
+        </GridCard>
       </section>
 
       {/* Date Time */}
       <section className='not-md:order-first order-3 md:col-span-2 lg:col-span-1'>
-        <HomeCard>
+        <GridCard>
           <DateTime />
-        </HomeCard>
+        </GridCard>
       </section>
 
       {/* Contact Me */}
@@ -40,7 +40,7 @@ export default async function HomePage() {
 
       {/* Projects */}
       <section className='not-md:order-4 order-last md:col-span-full'>
-        <HomeCard>
+        <GridCard>
           <h2 className='font-wellfleet text-2xl'>{t('projects.title')}</h2>
           <div className='[&_p]:text-foreground/70 [&_p]:leading-5'>
             <p>
@@ -59,7 +59,7 @@ export default async function HomePage() {
               </Link>
             </p>
           </div>
-        </HomeCard>
+        </GridCard>
       </section>
     </main>
   )
