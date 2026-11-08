@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
-import tw from 'tailwind-styled-components'
 import { AboutMe, ContactMe, DateTime } from '@/components/home'
+import { HomeCard } from '@/components/shared'
 
 export default async function HomePage() {
   const t = await getTranslations()
@@ -15,22 +15,22 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className='not-md:order-3 order-2 md:col-span-2'>
-        <Card>
-          <h2>{t('cta.title')}</h2>
-          <p>
+        <HomeCard>
+          <h2 className='font-wellfleet text-2xl'>{t('cta.title')}</h2>
+          <p className='text-foreground/70 leading-5'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum vel reprehenderit a, facere rerum
             cumque eos, unde cupiditate hic repudiandae, eveniet laborum aperiam sequi beatae quisquam corporis quos!
             Commodi aliquid, ullam eaque culpa consequatur quo provident esse ad modi quod sapiente et dolores corrupti
             quaerat laborum fuga?
           </p>
-        </Card>
+        </HomeCard>
       </section>
 
       {/* Date Time */}
       <section className='not-md:order-first order-3 md:col-span-2 lg:col-span-1'>
-        <Card>
+        <HomeCard>
           <DateTime />
-        </Card>
+        </HomeCard>
       </section>
 
       {/* Contact Me */}
@@ -40,9 +40,9 @@ export default async function HomePage() {
 
       {/* Projects */}
       <section className='not-md:order-4 order-last md:col-span-full'>
-        <Card>
-          <h2>{t('projects.title')}</h2>
-          <div>
+        <HomeCard>
+          <h2 className='font-wellfleet text-2xl'>{t('projects.title')}</h2>
+          <div className='[&_p]:text-foreground/70 [&_p]:leading-5'>
             <p>
               <Link className='text-sky-500 hover:opacity-80' href='/projects/1' scroll={false}>
                 Project 1
@@ -59,10 +59,8 @@ export default async function HomePage() {
               </Link>
             </p>
           </div>
-        </Card>
+        </HomeCard>
       </section>
     </main>
   )
 }
-
-const Card = tw.div`size-full rounded-2xl bg-background-content p-6 light:shadow-foreground/10 light:shadow-sm [&_h2]:font-wellfleet [&_h2]:text-2xl [&_p]:text-foreground/70 [&_p]:leading-5`
