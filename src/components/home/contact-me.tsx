@@ -56,7 +56,7 @@ function SocialLink({ title, subtitle, href, className, icon: Icon }: SocialLink
       rel='noopener'
       target='_blank'
     >
-      <Icon className={cn('size-8 shrink-0 dark:rounded-xs dark:bg-white', className)} />
+      <Icon className={cn('size-8 shrink-0 dark:rounded-sm dark:bg-white', className)} />
       <div className='grow'>
         <p className='font-bold text-sm'>{title}</p>
         <p className='line-clamp-1 text-current/60 text-xs'>{subtitle}</p>
