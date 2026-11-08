@@ -3,7 +3,7 @@
 import { useTheme } from '@teispace/next-themes'
 import { useTranslations } from 'next-intl'
 import { FaMoon, FaSun } from 'react-icons/fa'
-import { ActionButton } from '@/components/shared'
+import { ActionButton } from '@/styles/styled'
 
 export function ThemeButton() {
   const t = useTranslations('header.theme_button')
