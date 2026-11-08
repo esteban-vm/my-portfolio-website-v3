@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server'
-import { HomeCard } from '../shared'
+import { HomeCard } from '@/styles/styled'
 
 export async function ContactMe() {
   const t = await getTranslations('contact')
