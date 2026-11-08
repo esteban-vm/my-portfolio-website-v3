@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "tw-glass";
+@import "@teispace/next-themes/tailwind.css";
+
+:root {
+  --background: #f7f7f7;
+  --background-content: #ffffff;
+  --foreground: #171717;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --background-content: #141414;
+  --foreground: #ededed;
+  color-scheme: dark;
+}
+
+@theme {
+  --font-geist: var(--geist);
+  --font-wellfleet: var(--wellfleet);
+  --color-background: var(--background);
+  --color-background-content: var(--background-content);
+  --color-foreground: var(--foreground);
+}
+
+* {
+  scrollbar-color: var(--color-foreground);
+  scrollbar-width: thin;
+
+  &::selection {
+    @apply bg-foreground text-background-content;
+  }
+}
+
+a,
+img,
+label,
+button,
+::placeholder {
+  @apply select-none;
+}
