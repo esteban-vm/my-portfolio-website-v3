@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { AboutMe, ContactMe, DateTime } from '@/components/home'
-import { HomeCard } from '@/components/shared'
+import { HomeCard } from '@/styles/styled'
 
 export default async function HomePage() {
   const t = await getTranslations()
