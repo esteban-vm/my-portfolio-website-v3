@@ -1,5 +1,9 @@
+import type { IconType } from 'react-icons'
 import { getTranslations } from 'next-intl/server'
-import { FaExternalLinkAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaExternalLinkAlt } from 'react-icons/fa'
+import { FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
+import tw from 'tailwind-styled-components'
+import { cn } from '@/lib/ui'
 import { GridCard } from '@/styles/styled'
 
 export async function ContactMe() {
@@ -8,42 +12,45 @@ export async function ContactMe() {
   return (
     <GridCard>
       <div className='mx-auto flex w-full max-w-md flex-col'>
-        <h2 className='line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase'>{t('title')}</h2>
+        <Title>{t('title')}</Title>
         <br />
-        <h3 className='font-wellfleet text-foreground/75 uppercase'>Correo electrónico</h3>
+        <Subtitle>Correo electrónico</Subtitle>
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
-        <h3 className='mt-1 font-wellfleet text-foreground/75 uppercase'>Redes profesionales</h3>
+        <Subtitle className='mt-1'>Redes profesionales</Subtitle>
         <div className='flex gap-1'>
-          <a
-            className='flex w-1/2 items-center gap-1.5 rounded-lg border border-foreground/30 px-3 py-2 hover:opacity-90'
-            href='https://github.com/esteban-vm'
-            rel='noopener'
-            target='_blank'
-          >
-            <FaGithub className='size-8' />
-            <div className='grow'>
-              <p className='font-bold text-sm'>GitHub</p>
-              <p className='line-clamp-1 text-current/60 text-xs'>@esteban-vm</p>
-            </div>
-            <FaExternalLinkAlt className='size-4 shrink-0 text-current/60' />
-          </a>
-          <a
-            className='flex w-1/2 items-center gap-1.5 rounded-lg border border-foreground/30 px-3 py-2 hover:opacity-90'
-            href='https://www.linkedin.com/in/webdev-esteban/'
-            rel='noopener'
-            target='_blank'
-          >
-            <FaLinkedin className='size-8 border-[#0059b3] fill-[#0967C2]' />
-            <div className='grow'>
-              <p className='font-bold text-sm'>LinkedIn</p>
-              <p className='line-clamp-1 text-current/60 text-xs'>in/webdev-esteban</p>
-            </div>
-            <FaExternalLinkAlt className='size-4 shrink-0 text-current/60' />
-          </a>
+          <SocialLink className='text-black' href='https://github.com/esteban-vm' icon={FaSquareGithub} />
+          <SocialLink className='text-[#0967C2]' href='https://www.linkedin.com/in/webdev-esteban/' icon={FaLinkedin} />
         </div>
-        <h3 className='mt-1 font-wellfleet text-foreground/75 uppercase'>Estado</h3>
+        <Subtitle className='mt-1'>Estado</Subtitle>
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
       </div>
     </GridCard>
   )
 }
+
+interface SocialLinkProps {
+  href: string
+  className: string
+  icon: IconType
+}
+
+function SocialLink({ href, className, icon: Icon }: SocialLinkProps) {
+  return (
+    <a
+      className='flex w-1/2 items-center gap-1.5 rounded-lg border border-foreground/30 px-3 py-2 hover:opacity-90'
+      href={href}
+      rel='noopener'
+      target='_blank'
+    >
+      <Icon className={cn('size-8 shrink-0 dark:rounded-xs dark:bg-white', className)} />
+      <div className='grow'>
+        <p className='font-bold text-sm'>GitHub</p>
+        <p className='line-clamp-1 text-current/60 text-xs'>@esteban-vm</p>
+      </div>
+      <FaExternalLinkAlt className='size-4 shrink-0 text-current/60' />
+    </a>
+  )
+}
+
+const Title = tw.h2`line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase`
+const Subtitle = tw.h3`font-wellfleet text-foreground/75 uppercase`
