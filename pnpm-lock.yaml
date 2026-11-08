@@ -215,6 +215,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      tailwind-merge:
+        specifier: ^3.7.0
+        version: 3.7.0
       tailwind-styled-components:
         specifier: ^2.2.0
         version: 2.2.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
@@ -1228,6 +1231,9 @@ packages:
   tailwind-merge@1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
 
+  tailwind-merge@3.7.0:
+    resolution: {integrity: sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==}
+
   tailwind-styled-components@2.2.0:
     resolution: {integrity: sha512-Ogemwk0p69aU8WE/ooJZHjqstdJgT5R6HGU6TFz2uSnveSEtvW+C6aWOjGCvCr5H/bREv0IbbQ4yODknRrLBRQ==}
     peerDependencies:
@@ -2059,6 +2065,8 @@ snapshots:
       react: 19.3.0
 
   tailwind-merge@1.14.0: {}
+
+  tailwind-merge@3.7.0: {}
 
   tailwind-styled-components@2.2.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
     dependencies:
