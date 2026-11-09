@@ -54,10 +54,9 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
           cookieOptions={{ name: THEME_COOKIE }}
           defaultTheme='system'
           disableTransitionOnChange
-          enableColorScheme={false}
+          enableColorScheme
           enableSystem
           initialTheme={initialTheme}
-          noScript
           storage='hybrid'
           storageKey={THEME_STORAGE}
           themes={['light', 'dark']}
