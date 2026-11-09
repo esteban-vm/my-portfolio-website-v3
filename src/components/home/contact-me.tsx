@@ -13,10 +13,9 @@ export async function ContactMe() {
     <GridCard>
       <div className='mx-auto flex w-full max-w-md flex-col'>
         <Title>{t('title')}</Title>
-        <br />
         <Subtitle>Correo electrónico</Subtitle>
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
-        <Subtitle className='mt-1'>Redes profesionales</Subtitle>
+        <Subtitle className='mt-1.5'>Redes profesionales</Subtitle>
         <div className='flex gap-1'>
           <SocialLink
             className='text-black'
@@ -33,7 +32,7 @@ export async function ContactMe() {
             title='LinkedIn'
           />
         </div>
-        <Subtitle className='mt-1'>Estado</Subtitle>
+        <Subtitle className='mt-1.5'>Estado</Subtitle>
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
       </div>
     </GridCard>
@@ -66,5 +65,5 @@ function SocialLink({ title, subtitle, href, className, icon: Icon }: SocialLink
   )
 }
 
-const Title = tw.h2`line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase`
-const Subtitle = tw.h3`font-wellfleet text-foreground/75 uppercase`
+const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase`
+const Subtitle = tw.h3`font-wellfleet text-foreground/75 text-lg`
