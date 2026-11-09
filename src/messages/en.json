@@ -31,7 +31,10 @@
     "title": "Welcome to my portfolio website!"
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contact",
+    "email": "Email",
+    "networks": "Professional networks",
+    "status": "Status"
   },
   "projects": {
     "title": "Projects"

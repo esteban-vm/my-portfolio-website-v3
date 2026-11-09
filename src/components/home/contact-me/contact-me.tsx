@@ -12,9 +12,9 @@ export async function ContactMe() {
     <GridCard>
       <div className='mx-auto flex w-full max-w-md flex-col'>
         <Title>{t('title')}</Title>
-        <Subtitle>Correo electrónico</Subtitle>
+        <Subtitle>{t('email')}</Subtitle>
         <EmailLink />
-        <Subtitle className='mt-1.5'>Redes profesionales</Subtitle>
+        <Subtitle className='mt-1.5'>{t('networks')}</Subtitle>
         <div className='flex gap-1'>
           <SocialLink
             className='text-black'
@@ -31,7 +31,7 @@ export async function ContactMe() {
             title='LinkedIn'
           />
         </div>
-        <Subtitle className='mt-1.5'>Estado</Subtitle>
+        <Subtitle className='mt-1.5'>{t('status')}</Subtitle>
         <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
       </div>
     </GridCard>

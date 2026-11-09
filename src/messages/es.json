@@ -31,7 +31,10 @@
     "title": "¡Bienvenido/a a mi portafolio web!"
   },
   "contact": {
-    "title": "Contacto"
+    "title": "Contacto",
+    "email": "Correo electrónico",
+    "networks": "Redes profesionales",
+    "status": "Estado"
   },
   "projects": {
     "title": "Proyectos"
