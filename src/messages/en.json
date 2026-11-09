@@ -34,7 +34,9 @@
     "title": "Contact",
     "email": "Email",
     "networks": "Professional networks",
-    "status": "Status"
+    "status": "Status",
+    "status_text": "Available",
+    "copy_button": "Copy to clipboard"
   },
   "projects": {
     "title": "Projects"

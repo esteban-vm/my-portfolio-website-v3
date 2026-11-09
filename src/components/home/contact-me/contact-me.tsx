@@ -32,7 +32,10 @@ export async function ContactMe() {
           />
         </div>
         <Subtitle className='mt-1.5'>{t('status')}</Subtitle>
-        <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
+        <Status>
+          <div className='size-3 rounded-full bg-current motion-safe:animate-pulse' />
+          <span>{t('status_text')}</span>
+        </Status>
       </div>
     </GridCard>
   )
@@ -40,3 +43,4 @@ export async function ContactMe() {
 
 const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase`
 const Subtitle = tw.h3`font-wellfleet text-foreground/75 text-lg`
+const Status = tw.div`flex items-center gap-2 rounded-lg border border-foreground/30 px-3 py-2 font-wellfleet text-emerald-500 text-sm uppercase dark:text-emerald-300`

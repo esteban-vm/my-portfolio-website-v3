@@ -1,11 +1,13 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
 import { FaRegCopy, FaRegEnvelope } from 'react-icons/fa6'
 import { EMAIL } from '@/lib/constants'
 
 export function EmailLink() {
+  const t = useTranslations('contact')
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
@@ -30,6 +32,7 @@ export function EmailLink() {
         className='text-current/60 enabled:cursor-pointer enabled:hover:opacity-90'
         disabled={copied}
         onClick={onCopy}
+        title={t('copy_button')}
         type='button'
       >
         {copied ? <FaCheck className='text-emerald-500 dark:text-emerald-300' /> : <FaRegCopy />}

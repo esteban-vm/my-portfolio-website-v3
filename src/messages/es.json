@@ -34,7 +34,9 @@
     "title": "Contacto",
     "email": "Correo electrónico",
     "networks": "Redes profesionales",
-    "status": "Estado"
+    "status": "Estado",
+    "status_text": "Disponible",
+    "copy_button": "Copiar al portapapeles"
   },
   "projects": {
     "title": "Proyectos"
