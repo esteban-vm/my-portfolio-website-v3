@@ -36,7 +36,8 @@
     "networks": "Redes profesionales",
     "status": "Estado",
     "status_text": "Disponible",
-    "copy_button": "Copiar al portapapeles"
+    "copy": "Copiar correo al portapapeles",
+    "copied": "¡Correo copiado!"
   },
   "projects": {
     "title": "Proyectos"

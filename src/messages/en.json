@@ -36,7 +36,8 @@
     "networks": "Professional networks",
     "status": "Status",
     "status_text": "Available",
-    "copy_button": "Copy to clipboard"
+    "copy": "Copy email to clipboard",
+    "copied": "Email copied!"
   },
   "projects": {
     "title": "Projects"
