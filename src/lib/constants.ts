@@ -12,3 +12,4 @@ export const CONTAINER_ID = 'container'
 
 // Data
 export const NAME = 'Esteban V.M.'
+export const EMAIL = 'estebanvm1990@gmail.com'
