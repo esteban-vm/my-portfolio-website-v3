@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
 import tw from 'tailwind-styled-components'
 import { GridCard } from '@/styles/styled'
+import { EmailLink } from './email-link'
 import { SocialLink } from './social-link'
 
 export async function ContactMe() {
@@ -12,7 +13,7 @@ export async function ContactMe() {
       <div className='mx-auto flex w-full max-w-md flex-col'>
         <Title>{t('title')}</Title>
         <Subtitle>Correo electrónico</Subtitle>
-        <div className='rounded-lg border border-foreground/30 px-3 py-2'>…</div>
+        <EmailLink />
         <Subtitle className='mt-1.5'>Redes profesionales</Subtitle>
         <div className='flex gap-1'>
           <SocialLink
