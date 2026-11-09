@@ -29,6 +29,10 @@
   scrollbar-color: var(--color-foreground);
   scrollbar-width: thin;
 
+  &:focus-visible {
+    @apply outline-foreground/50 outline-1 outline-offset-2;
+  }
+
   &::selection {
     @apply bg-foreground text-background-content;
   }
