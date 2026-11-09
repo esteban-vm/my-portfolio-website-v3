@@ -16,7 +16,7 @@ export default async function HomePage() {
       {/* CTA */}
       <section className='not-md:order-3 order-2 md:col-span-2'>
         <GridCard>
-          <h2 className='font-wellfleet text-2xl'>{t('cta.title')}</h2>
+          <h2 className='font-wellfleet text-2xl text-foreground/80'>{t('cta.title')}</h2>
           <p className='text-foreground/70 leading-5'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum vel reprehenderit a, facere rerum
             cumque eos, unde cupiditate hic repudiandae, eveniet laborum aperiam sequi beatae quisquam corporis quos!
@@ -41,7 +41,7 @@ export default async function HomePage() {
       {/* Projects */}
       <section className='not-md:order-4 order-last md:col-span-full'>
         <GridCard>
-          <h2 className='font-wellfleet text-2xl'>{t('projects.title')}</h2>
+          <h2 className='font-wellfleet text-2xl text-foreground/80'>{t('projects.title')}</h2>
           <div className='[&_p]:text-foreground/70 [&_p]:leading-5'>
             <p>
               <Link className='text-sky-500 hover:opacity-80' href='/projects/1' scroll={false}>
