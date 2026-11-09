@@ -27,7 +27,7 @@ export function EmailLink() {
         {EMAIL}
       </a>
       <button
-        className='cursor-pointer text-current/60 enabled:hover:opacity-90'
+        className='text-current/60 enabled:cursor-pointer enabled:hover:opacity-90'
         disabled={copied}
         onClick={onCopy}
         type='button'
