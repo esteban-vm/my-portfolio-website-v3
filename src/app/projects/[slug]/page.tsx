@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { projects } from '@/lib/constants'
 
 export const instant = false
 
@@ -15,10 +17,13 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params
 
+  const project = projects.find((p) => p.slug === slug)
+  if (!project) notFound()
+
   return (
     <div className='mt-4 mb-2 grow border border-foreground/30'>
       <h2>ProjectPage</h2>
-      <p>Project: {slug}</p>
+      <p>{project.title}</p>
     </div>
   )
 }
