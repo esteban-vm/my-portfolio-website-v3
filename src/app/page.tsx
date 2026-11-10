@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { AboutMe, ContactMe, DateTime } from '@/components/home'
+import { projects } from '@/lib/constants'
 import { GridCard } from '@/styles/styled'
 
 export default async function HomePage() {
@@ -43,21 +44,15 @@ export default async function HomePage() {
         <GridCard>
           <h2 className='font-wellfleet text-2xl text-foreground/80'>{t('projects.title')}</h2>
           <div className='[&_p]:text-foreground/70 [&_p]:leading-5'>
-            <p>
-              <Link className='text-sky-500 hover:opacity-80' href='/projects/1' scroll={false}>
-                Project 1
-              </Link>
-            </p>
-            <p>
-              <Link className='text-sky-500 hover:opacity-80' href='/projects/2' scroll={false}>
-                Project 2
-              </Link>
-            </p>
-            <p>
-              <Link className='text-sky-500 hover:opacity-80' href='/projects/3' scroll={false}>
-                Project 3
-              </Link>
-            </p>
+            {projects.map((project) => {
+              return (
+                <p key={project.slug}>
+                  <Link className='text-sky-500 hover:opacity-80' href={`/projects/${project.slug}`} scroll={false}>
+                    {project.title}
+                  </Link>
+                </p>
+              )
+            })}
           </div>
         </GridCard>
       </section>
