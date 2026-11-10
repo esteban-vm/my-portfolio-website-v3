@@ -29,7 +29,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) notFound()
 
   return (
-    <div className='mt-4 mb-2 grow border border-foreground/30'>
+    <div className='border border-foreground/30'>
       <h2>ProjectPage</h2>
       <p>{project.title}</p>
     </div>

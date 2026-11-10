@@ -8,7 +8,7 @@ export default async function HomePage() {
   const t = await getTranslations()
 
   return (
-    <main className='relative mt-4 mb-2 grid grow gap-2 md:grid-cols-4 lg:grid-cols-3'>
+    <main className='grid grow gap-2 md:grid-cols-4 lg:grid-cols-3'>
       {/* About Me */}
       <section className='not-md:order-2 order-first md:col-span-2 lg:col-span-1'>
         <AboutMe />
