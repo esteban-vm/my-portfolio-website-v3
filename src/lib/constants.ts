@@ -1,3 +1,5 @@
+import type { Project } from '@/types'
+
 // i18n
 export const LOCALES = ['en', 'es'] as const
 export const LOCALE_COOKIE = 'MY_PORTFOLIO_LOCALE'
@@ -13,3 +15,10 @@ export const CONTAINER_ID = 'container'
 // Data
 export const NAME = 'Esteban V.M.'
 export const EMAIL = 'estebanvm1990@gmail.com'
+
+// Projects
+export const projects: Project[] = [
+  { title: 'Project 1', slug: 'project_1' },
+  { title: 'Project 2', slug: 'project_2' },
+  { title: 'Project 3', slug: 'project_3' },
+]
