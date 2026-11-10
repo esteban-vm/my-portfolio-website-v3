@@ -20,19 +20,18 @@ export function ProjectModal({ slug }: { slug: string }) {
 
   return createPortal(
     <Dialog onClose={router.back} ref={dialogRef}>
-      <p>ProjectModal</p>
-      <p>Project: {slug}</p>
-      <form method='dialog'>
-        <button
-          className='cursor-pointer rounded-lg border border-foreground/30 bg-transparent px-3 py-2 hover:opacity-90 active:scale-95'
-          type='submit'
-        >
-          Close
-        </button>
-      </form>
+      <Content>
+        <p>ProjectModal</p>
+        <p>Project: {slug}</p>
+        <form method='dialog'>
+          <Button type='submit'>Close</Button>
+        </form>
+      </Content>
     </Dialog>,
     document.getElementById(MODAL_ROOT_ID)!
   )
 }
 
-const Dialog = tw.dialog`-translate-1/2 motion-safe:fade-in glass glass-surface glass-saturation-100 glass-blur-1 glass-strength-5 top-1/2 left-1/2 flex w-[calc(100%-var(--spacing)*4)] max-w-lg animate-in flex-col items-center justify-center gap-3 rounded-2xl fill-mode-forwards p-6 text-foreground duration-1000 backdrop:bg-background/80`
+const Dialog = tw.dialog`-translate-1/2 glass glass-surface glass-saturation-100 glass-blur-1 glass-strength-5 top-1/2 left-1/2 w-[calc(100%-var(--spacing)*4)] max-w-lg rounded-2xl p-6 backdrop:bg-background/80`
+const Content = tw.div`fade-in flex flex-col items-center justify-center gap-3 fill-mode-forwards text-foreground duration-1000 motion-safe:animate-in`
+const Button = tw.button`cursor-pointer rounded-lg border border-foreground/30 bg-transparent px-3 py-2 hover:opacity-90 active:scale-95`
