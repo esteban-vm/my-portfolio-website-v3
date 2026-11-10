@@ -1,12 +1,13 @@
 'use client'
 
+import type { Project } from '@/types'
 import { useRouter } from 'next/navigation'
 import { use, useEffect, useRef } from 'react'
 import { browser, createPortal } from 'react-dom'
 import tw from 'tailwind-styled-components'
 import { MODAL_ROOT_ID } from '@/lib/constants'
 
-export function ProjectModal({ slug }: { slug: string }) {
+export function ProjectModal({ project }: { project: Project }) {
   use(browser())
 
   const router = useRouter()
@@ -22,7 +23,7 @@ export function ProjectModal({ slug }: { slug: string }) {
     <Dialog onClose={router.back} ref={dialogRef}>
       <Content>
         <p>ProjectModal</p>
-        <p>Project: {slug}</p>
+        <p>{project.title}</p>
         <form method='dialog'>
           <Button type='submit'>Close</Button>
         </form>
