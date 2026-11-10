@@ -9,8 +9,16 @@ export type ProjectPageProps = PageProps<'/projects/[slug]'>
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params
 
+  const project = projects.find((p) => p.slug === slug)
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+    }
+  }
+
   return {
-    title: `Project: ${slug}`,
+    title: project.title,
   }
 }
 
