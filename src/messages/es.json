@@ -27,6 +27,10 @@
     "title": "Página no encontrada",
     "link": "Volver a inicio"
   },
+  "error": {
+    "title": "¡Algo salió mal!",
+    "button": "Probar de nuevo"
+  },
   "about": {
     "subtitle": "Desarrollador Front-End",
     "text": "Hola👋, me llamo <important>{name}</important> y soy un <important>desarrollador web</important> enfocado en el <important>Front-End</important> que gusta de traer ideas a la realidad a través del código. Me guían las creatividad, la atención al detalle y un deseo constante de aprender. Mi meta es combinar estética y funcionalidad para crear proyectos que realmente destaquen entre los demás."

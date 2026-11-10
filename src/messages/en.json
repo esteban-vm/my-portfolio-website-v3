@@ -27,6 +27,10 @@
     "title": "Page not found",
     "link": "Back to home"
   },
+  "error": {
+    "title": "Something went wrong!",
+    "button": "Try again"
+  },
   "about": {
     "subtitle": "Front-End Developer",
     "text": "Hello👋, I'm <important>{name}</important> and I am a <important>web developer</important> focused on <important>Front-End</important> who likes bringing ideas to life through code. I am driven by creativity, attention to detail, and a constant desire to learn. My goal is to combine aesthetics and functionality to create projects that truly stand out among others."
