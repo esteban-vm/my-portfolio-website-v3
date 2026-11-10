@@ -23,6 +23,10 @@
     "text": "Hecha con Next.js y Tailwind",
     "scroll_button": "Volver arriba"
   },
+  "not_found": {
+    "title": "Página no encontrada",
+    "link": "Volver a inicio"
+  },
   "about": {
     "subtitle": "Desarrollador Front-End",
     "text": "Hola👋, me llamo <important>{name}</important> y soy un <important>desarrollador web</important> enfocado en el <important>Front-End</important> que gusta de traer ideas a la realidad a través del código. Me guían las creatividad, la atención al detalle y un deseo constante de aprender. Mi meta es combinar estética y funcionalidad para crear proyectos que realmente destaquen entre los demás."
@@ -40,6 +44,7 @@
     "copied": "¡Correo copiado!"
   },
   "projects": {
-    "title": "Proyectos"
+    "title": "Proyectos",
+    "not_found": "Proyecto no encontrado"
   }
 }
