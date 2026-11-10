@@ -8,7 +8,7 @@ export async function NotFound({ title }: { title: string }) {
   return (
     <section className='space-y-1 text-center'>
       <TbError404 className='inline size-28 text-red-500' />
-      <h2>{title}</h2>
+      <h2 className='text-xl'>{title}</h2>
       <Link className='mt-2 text-sky-500 hover:opacity-80' href='/'>
         {t('link')}
       </Link>
