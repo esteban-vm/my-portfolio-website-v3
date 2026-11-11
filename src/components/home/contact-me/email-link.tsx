@@ -47,4 +47,4 @@ export function EmailLink() {
   )
 }
 
-const Wrapper = tw.div`light:inset-shadow-foreground/10 light:inset-shadow-sm flex items-center justify-between gap-2 rounded-lg bg-background px-3 py-2 text-sm dark:border dark:border-foreground/10`
+const Wrapper = tw.div`flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm`

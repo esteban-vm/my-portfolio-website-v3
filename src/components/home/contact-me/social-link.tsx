@@ -24,4 +24,4 @@ export function SocialLink({ title, subtitle, href, className, icon: Icon }: Soc
   )
 }
 
-const Wrapper = tw.a`light:inset-shadow-foreground/10 light:inset-shadow-sm flex w-1/2 items-center justify-center gap-1.5 rounded-lg border border-foreground/10 light:border-transparent bg-background px-3 py-2 font-geist hover:opacity-90`
+const Wrapper = tw.a`flex w-1/2 items-center justify-center gap-1.5 rounded-lg border border-foreground/10 bg-background px-3 py-2 font-geist hover:opacity-90`
