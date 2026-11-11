@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
 import { FaRegCopy, FaRegEnvelope } from 'react-icons/fa6'
+import tw from 'tailwind-styled-components'
 import { EMAIL } from '@/lib/constants'
 
 export function EmailLink() {
@@ -23,8 +24,8 @@ export function EmailLink() {
   }
 
   return (
-    <div className='flex items-center justify-between gap-2 rounded-lg border border-foreground/30 px-3 py-2 text-sm'>
-      <FaRegEnvelope className='text-current/60' />
+    <Wrapper>
+      <FaRegEnvelope className='size-4 text-current/60' />
       <div className='grow'>
         <a
           className='font-wellfleet text-sky-500 text-sm underline hover:opacity-90 dark:text-sky-300'
@@ -34,7 +35,7 @@ export function EmailLink() {
         </a>
       </div>
       <button
-        className='text-current/60 enabled:cursor-pointer enabled:hover:opacity-90'
+        className='text-current/60 enabled:cursor-pointer enabled:hover:opacity-90 [&_svg]:size-4'
         disabled={copied}
         onClick={onCopy}
         title={copied ? t('copied') : t('copy')}
@@ -42,6 +43,8 @@ export function EmailLink() {
       >
         {copied ? <FaCheck className='text-emerald-500 dark:text-emerald-300' /> : <FaRegCopy />}
       </button>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = tw.div`light:inset-shadow-foreground/10 light:inset-shadow-sm flex items-center justify-between gap-2 rounded-lg bg-background px-3 py-2 text-sm dark:border dark:border-foreground/10`

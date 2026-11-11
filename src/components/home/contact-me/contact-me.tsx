@@ -10,7 +10,7 @@ export async function ContactMe() {
 
   return (
     <GridCard>
-      <div className='mx-auto flex w-full max-w-md flex-col'>
+      <div className='mx-auto flex w-full max-w-md flex-col font-wellfleet'>
         <Title>{t('title')}</Title>
         <Subtitle>{t('email')}</Subtitle>
         <EmailLink />
@@ -41,6 +41,6 @@ export async function ContactMe() {
   )
 }
 
-const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase`
-const Subtitle = tw.h3`font-wellfleet text-foreground/75 text-lg`
-const Status = tw.div`flex items-center gap-2 rounded-lg border border-foreground/30 px-3 py-2 font-wellfleet text-emerald-500 text-sm uppercase dark:text-emerald-300`
+const Title = tw.h2`mb-2 line-clamp-1 text-foreground/80 text-xl uppercase`
+const Subtitle = tw.h3`text-foreground/75 text-lg`
+const Status = tw.div`light:inset-shadow-foreground/10 light:inset-shadow-sm flex items-center gap-2 rounded-lg bg-background px-3 py-2 text-emerald-500 text-sm uppercase dark:border dark:border-foreground/10 dark:text-emerald-300`
