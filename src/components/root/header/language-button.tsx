@@ -6,6 +6,8 @@ import { IoLanguage } from 'react-icons/io5'
 import tw from 'tailwind-styled-components'
 import { changeLanguage } from '@/actions'
 import { GlassButton } from '@/styles/styled'
+import { IconSpain } from './icon-spain'
+import { IconUK } from './icon-uk'
 
 export function LanguageButton() {
   const locale = useLocale()
@@ -25,9 +27,9 @@ export function LanguageButton() {
       type='button'
     >
       <IoLanguage />
-      <Badge>{locale}</Badge>
+      <Flag $as={locale === 'es' ? IconSpain : IconUK} />
     </GlassButton>
   )
 }
 
-const Badge = tw.span`absolute top-0 left-0 -translate-x-1/6 -translate-y-1/4 bg-transparent font-semibold font-wellfleet text-current text-xs uppercase`
+const Flag = tw.svg`absolute top-0 left-0 -translate-x-1/6 -translate-y-1/4 scale-110 brightness-125`
