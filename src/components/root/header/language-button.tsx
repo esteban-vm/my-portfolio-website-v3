@@ -30,4 +30,4 @@ export function LanguageButton() {
   )
 }
 
-const Badge = tw.span`-translate-1/4 absolute top-0 left-0 rounded-lg bg-transparent px-1 py-0.5 font-semibold font-wellfleet text-current text-xs uppercase`
+const Badge = tw.span`-translate-1/4 absolute top-0 left-0 bg-transparent font-semibold font-wellfleet text-current text-xs uppercase`
