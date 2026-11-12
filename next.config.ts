@@ -11,17 +11,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
     qualities: [75, 100],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.weatherapi.com',
-        pathname: '/weather/**',
-      },
-    ],
   },
   experimental: {
     typedEnv: true,
-    agentFeedback: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
