@@ -27,12 +27,7 @@ export function EmailLink() {
     <Wrapper>
       <FaRegEnvelope className='size-4 text-current/60' />
       <div className='grow'>
-        <a
-          className='font-wellfleet text-sky-500 text-sm underline hover:opacity-90 dark:text-sky-300'
-          href={`mailto:${EMAIL}`}
-        >
-          {EMAIL}
-        </a>
+        <Link href={`mailto:${EMAIL}`}>{EMAIL}</Link>
       </div>
       <button
         className='text-current/60 enabled:cursor-pointer enabled:hover:opacity-90 [&_svg]:size-4'
@@ -48,3 +43,4 @@ export function EmailLink() {
 }
 
 const Wrapper = tw.div`flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm`
+const Link = tw.a`font-semibold text-sky-500 text-sm hover:underline hover:opacity-90 dark:text-sky-300`
