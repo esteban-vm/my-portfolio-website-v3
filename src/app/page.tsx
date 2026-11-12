@@ -42,7 +42,11 @@ export default async function HomePage() {
             {projects.map((project) => {
               return (
                 <p key={project.slug}>
-                  <Link className='text-sky-500 hover:opacity-80' href={`/projects/${project.slug}`} scroll={false}>
+                  <Link
+                    className='text-sky-500 hover:opacity-80 dark:text-sky-300'
+                    href={`/projects/${project.slug}`}
+                    scroll={false}
+                  >
                     {project.title}
                   </Link>
                 </p>
