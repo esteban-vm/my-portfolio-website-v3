@@ -7,7 +7,7 @@ export async function AboutMe() {
 
   return (
     <GridCard className='items-start'>
-      <h2 className='font-bold font-wellfleet text-3xl'>{NAME}</h2>
+      <h2 className='font-bold font-wellfleet text-3xl uppercase'>{NAME}</h2>
       <h3 className='mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase'>{t('subtitle')}</h3>
       <p className='text-balance text-foreground/70 text-sm'>
         {t.rich('text', {
