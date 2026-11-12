@@ -16,9 +16,11 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className='order-2 md:col-span-2'>
-        <GridCard className='flex flex-col items-center justify-center text-center'>
-          <h1 className='shimmering mb-2 motion-safe:animate-shimmer'>{t('cta.title')}</h1>
-          <h2 className='font-wellfleet text-foreground/80 text-lg uppercase'>{t('cta.subtitle')}</h2>
+        <GridCard className='flex flex-col items-center justify-center text-center font-wellfleet'>
+          <h1 className='synth-gradient mb-2 bg-clip-text font-bold text-4xl text-transparent uppercase'>
+            {t('cta.title')}
+          </h1>
+          <h2 className='text-foreground/80 text-lg uppercase'>{t('cta.subtitle')}</h2>
         </GridCard>
       </section>
 

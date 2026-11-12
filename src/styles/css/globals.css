@@ -46,3 +46,7 @@ button,
 ::placeholder {
   @apply select-none;
 }
+
+.synth-gradient {
+  @apply bg-linear-[to_bottom,var(--color-fuchsia-600)_25%,var(--color-violet-600)_50%,var(--color-blue-600)_75%,var(--color-sky-600)] dark:bg-linear-[to_bottom,var(--color-fuchsia-400)_25%,var(--color-violet-400)_50%,var(--color-blue-400)_75%,var(--color-sky-400)];
+}
