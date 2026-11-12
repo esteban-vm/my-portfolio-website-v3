@@ -10,15 +10,15 @@ export default async function HomePage() {
   return (
     <main className='grid grow gap-2 md:grid-cols-4 lg:grid-cols-3'>
       {/* About Me */}
-      <section className='not-md:order-2 order-first md:col-span-2 lg:col-span-1'>
+      <section className='not-md:order-3 order-first md:col-span-2 lg:col-span-1'>
         <AboutMe />
       </section>
 
       {/* CTA */}
-      <section className='not-md:order-3 order-2 md:col-span-2'>
-        <GridCard className='flex flex-col items-center justify-center'>
+      <section className='order-2 md:col-span-2'>
+        <GridCard className='flex flex-col items-center justify-center text-center'>
           <h2 className='shimmering motion-safe:animate-shimmer'>{t('cta.title')}</h2>
-          <p>Transformando ideas en experiencias digitales excepcionales</p>
+          <p className='text-foreground/80'>Transformando ideas en experiencias digitales excepcionales</p>
         </GridCard>
       </section>
 
