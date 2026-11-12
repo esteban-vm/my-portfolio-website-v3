@@ -9,7 +9,7 @@ export async function AboutMe() {
     <GridCard className='items-start'>
       <h2 className='font-bold font-wellfleet text-3xl'>{NAME}</h2>
       <h3 className='mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase'>{t('subtitle')}</h3>
-      <p className='text-balance text-foreground/70 text-sm leading-5'>
+      <p className='text-balance text-foreground/70 text-sm'>
         {t.rich('text', {
           name: NAME.slice(0, NAME.indexOf(' ')),
           important: (chunks) => <span className='font-semibold'>{chunks}</span>,
