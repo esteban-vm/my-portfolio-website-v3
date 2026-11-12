@@ -5,7 +5,6 @@ import { useAction } from 'next-safe-action/hooks'
 import { useEffect, useState } from 'react'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { FaLocationDot } from 'react-icons/fa6'
-import tw from 'tailwind-styled-components'
 import { getWeather } from '@/actions'
 
 export function DateTime() {
@@ -48,11 +47,7 @@ export function DateTime() {
   }, [result?.data, locale])
 
   if (isPending) {
-    return (
-      <Wrapper>
-        <AiOutlineLoading3Quarters className='size-12 animate-spin' />
-      </Wrapper>
-    )
+    return <AiOutlineLoading3Quarters className='size-12 animate-spin' />
   }
 
   if (!result?.data) return null
@@ -62,7 +57,7 @@ export function DateTime() {
   const { name, country } = result.data.location
 
   return (
-    <Wrapper>
+    <>
       <FaLocationDot className='size-10 text-red-500' />
       <time className='text-3xl' dateTime={time}>
         {time}
@@ -75,8 +70,6 @@ export function DateTime() {
       <span className='text-sm'>
         {locale === 'es' ? 'Asunción' : name}, {country}
       </span>
-    </Wrapper>
+    </>
   )
 }
-
-const Wrapper = tw.div`flex size-full flex-col items-center justify-center`

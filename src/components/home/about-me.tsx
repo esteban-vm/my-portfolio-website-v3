@@ -6,7 +6,7 @@ export async function AboutMe() {
   const t = await getTranslations('about')
 
   return (
-    <GridCard>
+    <GridCard className='items-start'>
       <h2 className='font-bold font-wellfleet text-3xl'>{NAME}</h2>
       <h3 className='mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase'>{t('subtitle')}</h3>
       <p className='text-foreground/70 leading-5'>
