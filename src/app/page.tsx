@@ -16,9 +16,15 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className='order-2 md:col-span-2'>
-        <GridCard className='text-center font-wellfleet'>
-          <h1 className='mb-2 text-balance font-bold text-4xl uppercase'>{t('cta.title')}</h1>
-          <h2 className='text-pretty text-foreground/80 text-xl uppercase'>{t('cta.subtitle')}</h2>
+        <GridCard className='gap-2 text-center font-wellfleet uppercase'>
+          <h1 className='text-balance font-bold text-4xl'>{t('cta.title')}</h1>
+          <h2 className='text-pretty text-foreground/80 text-xl'>{t('cta.subtitle')}</h2>
+          <button
+            className='rounded-lg border border-foreground/30 px-3 py-1.5 font-geist hover:opacity-80'
+            type='button'
+          >
+            Descargar CV
+          </button>
         </GridCard>
       </section>
 

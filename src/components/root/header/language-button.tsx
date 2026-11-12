@@ -5,7 +5,7 @@ import { useAction } from 'next-safe-action/hooks'
 import { IoLanguage } from 'react-icons/io5'
 import tw from 'tailwind-styled-components'
 import { changeLanguage } from '@/actions'
-import { GlassButton } from '@/styles/styled'
+import { CircleButton } from '@/styles/styled'
 import { IconSpain } from './icon-spain'
 import { IconUK } from './icon-uk'
 
@@ -19,7 +19,7 @@ export function LanguageButton() {
   }
 
   return (
-    <GlassButton
+    <CircleButton
       className='relative disabled:cursor-not-allowed'
       disabled={isPending}
       onClick={onLanguageChange}
@@ -28,7 +28,7 @@ export function LanguageButton() {
     >
       <IoLanguage />
       <Flag $as={locale === 'es' ? IconSpain : IconUK} />
-    </GlassButton>
+    </CircleButton>
   )
 }
 
