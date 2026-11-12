@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @import "tw-glass";
 @import "@teispace/next-themes/tailwind.css";
-@import "./shimmering.css";
 
 :root {
   --background: #f7f7f7;
