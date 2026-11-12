@@ -18,7 +18,7 @@ export default async function HomePage() {
       <section className='order-2 md:col-span-2'>
         <GridCard className='text-center font-wellfleet'>
           <h1 className='mb-2 text-balance font-bold text-4xl uppercase'>{t('cta.title')}</h1>
-          <h2 className='text-pretty text-foreground/80 text-lg uppercase'>{t('cta.subtitle')}</h2>
+          <h2 className='text-pretty text-foreground/80 text-xl uppercase'>{t('cta.subtitle')}</h2>
         </GridCard>
       </section>
 
@@ -37,7 +37,7 @@ export default async function HomePage() {
       {/* Projects */}
       <section className='not-md:order-4 order-last md:col-span-full'>
         <GridCard className='items-start'>
-          <h2 className='font-wellfleet text-2xl text-foreground/80'>{t('projects.title')}</h2>
+          <h2 className='font-wellfleet text-foreground/80 text-xl uppercase'>{t('projects.title')}</h2>
           <div className='[&_p]:text-foreground/70 [&_p]:leading-5'>
             {projects.map((project) => {
               return (
