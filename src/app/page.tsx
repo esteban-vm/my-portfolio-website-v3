@@ -23,7 +23,7 @@ export default async function HomePage() {
             className='rounded-lg border border-foreground/30 px-3 py-1.5 font-geist hover:opacity-80'
             type='button'
           >
-            Descargar CV
+            {t('cta.button')}
           </button>
         </GridCard>
       </section>
