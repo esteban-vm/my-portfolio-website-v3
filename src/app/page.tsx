@@ -16,14 +16,9 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className='not-md:order-3 order-2 md:col-span-2'>
-        <GridCard>
-          <h2 className='font-wellfleet text-2xl text-foreground/80'>{t('cta.title')}</h2>
-          <p className='text-foreground/70 leading-5'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum vel reprehenderit a, facere rerum
-            cumque eos, unde cupiditate hic repudiandae, eveniet laborum aperiam sequi beatae quisquam corporis quos!
-            Commodi aliquid, ullam eaque culpa consequatur quo provident esse ad modi quod sapiente et dolores corrupti
-            quaerat laborum fuga?
-          </p>
+        <GridCard className='flex flex-col items-center justify-center'>
+          <h2 className='shimmering motion-safe:animate-shimmer'>{t('cta.title')}</h2>
+          <p>Transformando ideas en experiencias digitales excepcionales</p>
         </GridCard>
       </section>
 
