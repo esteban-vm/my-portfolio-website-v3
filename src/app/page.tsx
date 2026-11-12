@@ -18,7 +18,7 @@ export default async function HomePage() {
       <section className='order-2 md:col-span-2'>
         <GridCard className='flex flex-col items-center justify-center text-center'>
           <h2 className='shimmering motion-safe:animate-shimmer'>{t('cta.title')}</h2>
-          <p className='text-foreground/80'>Transformando ideas en experiencias digitales excepcionales</p>
+          <p className='text-foreground/80'>{t('cta.text')}</p>
         </GridCard>
       </section>
 
