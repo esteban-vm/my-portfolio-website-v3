@@ -1,0 +1,18 @@
+.shimmering {
+  font-optical-sizing: auto;
+  @apply from-background-content via-foreground to-background-content font-bold font-wellfleet text-4xl uppercase;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @apply bg-linear-[135deg] bg-size-[200%_100%] bg-clip-text text-transparent;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
