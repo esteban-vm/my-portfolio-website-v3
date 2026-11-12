@@ -16,7 +16,7 @@ export default async function HomePage() {
 
       {/* CTA */}
       <section className='order-2 md:col-span-2'>
-        <GridCard className='text-center font-wellfleet'>
+        <GridCard className='text-pretty text-center font-wellfleet'>
           <h1 className='mb-2 font-bold text-4xl text-white uppercase' style={{ WebkitTextStroke: '0.01em black' }}>
             {t('cta.title')}
           </h1>
