@@ -37,7 +37,8 @@
   },
   "cta": {
     "title": "Welcome to my portfolio website!",
-    "subtitle": "Turning ideas into exceptional digital experiences"
+    "subtitle": "Turning ideas into exceptional digital experiences",
+    "button": "Download CV"
   },
   "contact": {
     "title": "Contact",
