@@ -20,6 +20,6 @@ export async function AboutMe() {
   )
 }
 
-const Title = tw.h2`font-bold font-wellfleet text-3xl uppercase`
-const Subtitle = tw.h3`mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-xl uppercase`
+const Title = tw.h2`font-bold font-wellfleet text-2xl uppercase lg:text-3xl`
+const Subtitle = tw.h3`mb-2 line-clamp-1 font-wellfleet text-foreground/80 text-lg uppercase lg:text-xl`
 const Text = tw.p`text-balance text-foreground/70 text-sm`

@@ -12,9 +12,9 @@ export async function ContactMe() {
     <GridCard>
       <div className='mx-auto flex w-full max-w-md flex-col'>
         <Title>{t('title')}</Title>
-        <Subtitle>{t('email')}</Subtitle>
+        <Label>{t('email')}</Label>
         <EmailLink />
-        <Subtitle className='mt-1.5'>{t('networks')}</Subtitle>
+        <Label className='mt-1.5'>{t('networks')}</Label>
         <div className='flex gap-1'>
           <SocialLink
             className='text-black'
@@ -31,7 +31,7 @@ export async function ContactMe() {
             title='LinkedIn'
           />
         </div>
-        <Subtitle className='mt-1.5'>{t('status')}</Subtitle>
+        <Label className='mt-1.5'>{t('status')}</Label>
         <Status>
           <div className='size-3 rounded-full bg-current motion-safe:animate-pulse' />
           <span>{t('status_text')}</span>
@@ -41,6 +41,6 @@ export async function ContactMe() {
   )
 }
 
-const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-xl uppercase`
-const Subtitle = tw.h3`text-foreground/75 text-sm`
+const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-lg uppercase lg:text-xl`
+const Label = tw.h3`text-foreground/75 text-sm`
 const Status = tw.div`flex items-center gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 font-semibold text-emerald-500 text-sm uppercase dark:text-emerald-300`

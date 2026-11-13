@@ -18,6 +18,6 @@ export async function CallToAction() {
   )
 }
 
-const Title = tw.h1`text-balance font-bold text-4xl`
-const Subtitle = tw.h2`text-pretty text-foreground/80 text-xl`
+const Title = tw.h1`text-balance font-bold text-3xl lg:text-4xl`
+const Subtitle = tw.h2`text-pretty text-foreground/80 text-lg lg:text-xl`
 const Button = tw.button`flex items-center gap-2 rounded-lg border border-foreground/30 px-3 py-1.5 font-geist text-sm hover:opacity-80`
