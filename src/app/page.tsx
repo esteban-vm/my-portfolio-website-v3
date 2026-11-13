@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
+import { FaDownload } from 'react-icons/fa'
 import { AboutMe, ContactMe, DateTime } from '@/components/home'
 import { projects } from '@/lib/constants'
 import { GridCard } from '@/styles/styled'
@@ -20,10 +21,11 @@ export default async function HomePage() {
           <h1 className='text-balance font-bold text-4xl'>{t('cta.title')}</h1>
           <h2 className='text-pretty text-foreground/80 text-xl'>{t('cta.subtitle')}</h2>
           <button
-            className='rounded-lg border border-foreground/30 px-3 py-1.5 font-geist hover:opacity-80'
+            className='flex items-center gap-2 rounded-lg border border-foreground/30 px-3 py-1.5 font-geist text-sm hover:opacity-80'
             type='button'
           >
-            {t('cta.button')}
+            <FaDownload />
+            <span>{t('cta.button')}</span>
           </button>
         </GridCard>
       </section>
