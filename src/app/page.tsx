@@ -45,27 +45,26 @@ export default async function HomePage() {
       {/* Projects */}
       <section className='not-md:order-4 order-last md:col-span-full'>
         <GridCard className='items-start'>
-          <h2 className='font-wellfleet text-xl uppercase'>{t('projects.title')}</h2>
-          <div className='scrollbar-none! size-full h-52 snap-y snap-mandatory overflow-auto scroll-smooth rounded-lg'>
+          <h2 className='mb-2 font-wellfleet text-xl uppercase'>{t('projects.title')}</h2>
+          <div className='scrollbar-none! h-52 snap-y snap-mandatory overflow-auto scroll-smooth rounded-lg border border-foreground/10'>
             {projects.map((project) => {
               return (
-                <div className='h-1/3 snap-start scroll-m-0 bg-background p-1' key={project.slug}>
-                  <div className='flex size-full flex-col justify-center rounded-lg border border-foreground/10 bg-background-content'>
-                    <Link
-                      className='w-fit text-sky-500 hover:opacity-80 dark:text-sky-300'
-                      href={`/projects/${project.slug}`}
-                      scroll={false}
-                    >
-                      {project.title}
-                    </Link>
-                    <p className='truncate'>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quod nihil laborum distinctio
-                      inventore sed vel voluptates, aliquid tenetur natus sunt aspernatur doloremque nam. Voluptatem
-                      beatae quis ipsam amet enim quam explicabo officia nostrum quae ipsum, aspernatur, itaque vel
-                      expedita unde earum id, odit non animi libero doloribus optio voluptatum?
-                    </p>
-                  </div>
-                </div>
+                <Link
+                  className='flex h-1/3 snap-start scroll-m-0 flex-col justify-center bg-background px-4 hover:opacity-80'
+                  href={`/projects/${project.slug}`}
+                  key={project.slug}
+                  scroll={false}
+                >
+                  <span className='w-fit font-semibold font-wellfleet text-sky-500 uppercase dark:text-sky-300'>
+                    {project.title}
+                  </span>
+                  <p className='line-clamp-1 text-foreground/80'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quod nihil laborum distinctio
+                    inventore sed vel voluptates, aliquid tenetur natus sunt aspernatur doloremque nam. Voluptatem
+                    beatae quis ipsam amet enim quam explicabo officia nostrum quae ipsum, aspernatur, itaque vel
+                    expedita unde earum id, odit non animi libero doloribus optio voluptatum?
+                  </p>
+                </Link>
               )
             })}
           </div>
