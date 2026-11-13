@@ -8,7 +8,7 @@ import tw from 'tailwind-styled-components'
 import { EMAIL } from '@/lib/constants'
 
 export function EmailLink() {
-  const t = useTranslations('contact')
+  const t = useTranslations('contact_me')
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
