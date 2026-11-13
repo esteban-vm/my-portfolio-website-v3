@@ -8,8 +8,8 @@ export async function CallToAction() {
 
   return (
     <GridCard className='gap-2 text-center font-wellfleet uppercase'>
-      <h1 className='text-balance font-bold text-4xl'>{t('title')}</h1>
-      <h2 className='text-pretty text-foreground/80 text-xl'>{t('subtitle')}</h2>
+      <Title>{t('title')}</Title>
+      <Subtitle>{t('subtitle')}</Subtitle>
       <Button type='button'>
         <FaDownload />
         <span>{t('button')}</span>
@@ -18,4 +18,6 @@ export async function CallToAction() {
   )
 }
 
+const Title = tw.h1`text-balance font-bold text-4xl`
+const Subtitle = tw.h2`text-pretty text-foreground/80 text-xl`
 const Button = tw.button`flex items-center gap-2 rounded-lg border border-foreground/30 px-3 py-1.5 font-geist text-sm hover:opacity-80`
