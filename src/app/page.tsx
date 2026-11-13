@@ -46,18 +46,26 @@ export default async function HomePage() {
       <section className='not-md:order-4 order-last md:col-span-full'>
         <GridCard className='items-start'>
           <h2 className='font-wellfleet text-xl uppercase'>{t('projects.title')}</h2>
-          <div className='[&_p]:text-foreground/70 [&_p]:leading-5'>
+          <div className='scrollbar-none! size-full h-52 snap-y snap-mandatory overflow-auto scroll-smooth rounded-lg'>
             {projects.map((project) => {
               return (
-                <p key={project.slug}>
-                  <Link
-                    className='text-sky-500 hover:opacity-80 dark:text-sky-300'
-                    href={`/projects/${project.slug}`}
-                    scroll={false}
-                  >
-                    {project.title}
-                  </Link>
-                </p>
+                <div className='h-1/3 snap-start scroll-m-0 bg-background p-1' key={project.slug}>
+                  <div className='flex size-full flex-col justify-center rounded-lg border border-foreground/10 bg-background-content'>
+                    <Link
+                      className='w-fit text-sky-500 hover:opacity-80 dark:text-sky-300'
+                      href={`/projects/${project.slug}`}
+                      scroll={false}
+                    >
+                      {project.title}
+                    </Link>
+                    <p className='truncate'>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quod nihil laborum distinctio
+                      inventore sed vel voluptates, aliquid tenetur natus sunt aspernatur doloremque nam. Voluptatem
+                      beatae quis ipsam amet enim quam explicabo officia nostrum quae ipsum, aspernatur, itaque vel
+                      expedita unde earum id, odit non animi libero doloribus optio voluptatum?
+                    </p>
+                  </div>
+                </div>
               )
             })}
           </div>
