@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
-import { FaDownload, FaExternalLinkAlt } from 'react-icons/fa'
+import { BsArrowsFullscreen } from 'react-icons/bs'
+import { FaDownload } from 'react-icons/fa'
 import { AboutMe, ContactMe, DateTime } from '@/components/home'
 import { projects } from '@/lib/constants'
 import { GridCard } from '@/styles/styled'
@@ -50,7 +51,7 @@ export default async function HomePage() {
             {projects.map((project) => {
               return (
                 <Link
-                  className='flex h-1/3 snap-start scroll-m-0 items-center justify-center bg-background px-4 hover:opacity-80'
+                  className='flex h-1/3 snap-start scroll-m-0 items-center justify-center bg-background px-4 hover:bg-background-content'
                   href={`/projects/${project.slug}`}
                   key={project.slug}
                   scroll={false}
@@ -64,7 +65,7 @@ export default async function HomePage() {
                     beatae quis ipsam amet enim quam explicabo officia nostrum quae ipsum, aspernatur, itaque vel
                     expedita unde earum id, odit non animi libero doloribus optio voluptatum?
                   </p>
-                  <FaExternalLinkAlt className='ml-2 size-4 shrink-0 text-current/60' />
+                  <BsArrowsFullscreen className='ml-2 size-4 shrink-0 text-current/60' />
                 </Link>
               )
             })}
