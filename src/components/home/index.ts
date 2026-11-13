@@ -1,3 +1,5 @@
 export * from './about-me'
+export * from './call-to-action'
 export * from './contact-me'
 export * from './date-time'
+export * from './my-projects'
