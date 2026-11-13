@@ -3,7 +3,7 @@ import { NAME } from '@/lib/constants'
 import { GridCard } from '@/styles/styled'
 
 export async function AboutMe() {
-  const t = await getTranslations('about')
+  const t = await getTranslations('about_me')
 
   return (
     <GridCard className='items-start'>

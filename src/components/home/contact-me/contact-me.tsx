@@ -6,7 +6,7 @@ import { EmailLink } from './email-link'
 import { SocialLink } from './social-link'
 
 export async function ContactMe() {
-  const t = await getTranslations('contact')
+  const t = await getTranslations('contact_me')
 
   return (
     <GridCard>

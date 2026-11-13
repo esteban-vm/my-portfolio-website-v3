@@ -31,16 +31,16 @@
     "title": "Something went wrong!",
     "button": "Try again"
   },
-  "about": {
+  "about_me": {
     "subtitle": "Front-End Developer",
     "text": "Hello👋, I'm <important>{name}</important> and I am a <important>web developer</important> focused on <important>Front-End</important> who likes bringing ideas to life through code. I am driven by creativity, attention to detail, and a constant desire to learn. My goal is to combine aesthetics and functionality to create projects that truly stand out among others."
   },
-  "cta": {
+  "call_to_action": {
     "title": "Welcome to my portfolio website!",
     "subtitle": "Turning ideas into exceptional digital experiences",
     "button": "Download CV"
   },
-  "contact": {
+  "contact_me": {
     "title": "Contact",
     "email": "Email",
     "networks": "Professional networks",
@@ -49,7 +49,7 @@
     "copy": "Copy email to clipboard",
     "copied": "Email copied!"
   },
-  "projects": {
+  "my_projects": {
     "title": "Projects",
     "not_found": "Project not found"
   }

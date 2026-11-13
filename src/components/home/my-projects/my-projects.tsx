@@ -4,7 +4,7 @@ import { GridCard } from '@/styles/styled'
 import { ProjectLink } from './project-link'
 
 export async function MyProjects() {
-  const t = await getTranslations('projects')
+  const t = await getTranslations('my_projects')
 
   return (
     <GridCard className='items-start'>

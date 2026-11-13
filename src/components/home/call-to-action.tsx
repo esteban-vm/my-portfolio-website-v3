@@ -4,7 +4,7 @@ import tw from 'tailwind-styled-components'
 import { GridCard } from '@/styles/styled'
 
 export async function CallToAction() {
-  const t = await getTranslations('cta')
+  const t = await getTranslations('call_to_action')
 
   return (
     <GridCard className='gap-2 text-center font-wellfleet uppercase'>

@@ -31,16 +31,16 @@
     "title": "¡Algo salió mal!",
     "button": "Probar de nuevo"
   },
-  "about": {
+  "about_me": {
     "subtitle": "Desarrollador Front-End",
     "text": "Hola👋, me llamo <important>{name}</important> y soy un <important>desarrollador web</important> enfocado en el <important>Front-End</important> que gusta de traer ideas a la realidad a través del código. Me guían las creatividad, la atención al detalle y un deseo constante de aprender. Mi meta es combinar estética y funcionalidad para crear proyectos que realmente destaquen entre los demás."
   },
-  "cta": {
+  "call_to_action": {
     "title": "¡Bienvenido/a a mi portafolio web!",
     "subtitle": "Transformando ideas en experiencias digitales excepcionales",
     "button": "Descargar CV"
   },
-  "contact": {
+  "contact_me": {
     "title": "Contacto",
     "email": "Correo electrónico",
     "networks": "Redes profesionales",
@@ -49,7 +49,7 @@
     "copy": "Copiar correo al portapapeles",
     "copied": "¡Correo copiado!"
   },
-  "projects": {
+  "my_projects": {
     "title": "Proyectos",
     "not_found": "Proyecto no encontrado"
   }
