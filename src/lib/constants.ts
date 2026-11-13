@@ -21,4 +21,9 @@ export const projects: Project[] = [
   { title: 'Project 1', slug: 'project_1' },
   { title: 'Project 2', slug: 'project_2' },
   { title: 'Project 3', slug: 'project_3' },
+  { title: 'Project 4', slug: 'project_4' },
+  { title: 'Project 5', slug: 'project_5' },
+  { title: 'Project 6', slug: 'project_6' },
+  { title: 'Project 7', slug: 'project_7' },
+  { title: 'Project 8', slug: 'project_8' },
 ]
