@@ -5,7 +5,7 @@ import tw from 'tailwind-styled-components'
 
 export function ProjectLink({ project }: { project: Project }) {
   return (
-    <Link href={`/projects/${project.slug}`} key={project.slug} passHref scroll={false}>
+    <Link href={`/projects/${project.slug}`} passHref scroll={false}>
       <Wrapper>
         <div className='h-full grow'>
           <Title>{project.title}</Title>
