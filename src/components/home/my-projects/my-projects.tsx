@@ -20,4 +20,4 @@ export async function MyProjects() {
 }
 
 const Title = tw.h2`mb-2 font-wellfleet text-lg uppercase lg:text-xl`
-const Content = tw.div`scrollbar-none! h-52 snap-y snap-mandatory overflow-auto scroll-smooth rounded-lg border border-foreground/10`
+const Content = tw.div`scrollbar-none! h-52 w-full snap-y snap-mandatory overflow-auto scroll-smooth rounded-lg border border-foreground/10`
