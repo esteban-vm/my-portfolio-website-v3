@@ -48,5 +48,5 @@ button,
 }
 
 .glass-effect {
-  @apply border-[1.5px] border-foreground/20 light:border-2 light:border-background-content bg-background-content/20 light:shadow-sm shadow-foreground/10 backdrop-blur-[2px];
+  @apply ring-1 ring-foreground/20 light:ring-4 light:ring-background-content bg-background-content/20 light:shadow-sm shadow-foreground/10 backdrop-blur-[2px];
 }
