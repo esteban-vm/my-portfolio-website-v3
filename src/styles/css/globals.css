@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "tw-glass";
 @import "@teispace/next-themes/tailwind.css";
 
 :root {
@@ -45,8 +44,4 @@ label,
 button,
 ::placeholder {
   @apply select-none;
-}
-
-.glass-effect {
-  @apply ring-1 ring-foreground/20 light:ring-4 light:ring-background-content bg-background-content/20 light:shadow-sm shadow-foreground/10 backdrop-blur-[2px];
 }
