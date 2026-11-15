@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const project = projects.find((p) => p.slug === slug)
 
   if (!project) {
-    const t = await getTranslations('projects')
+    const t = await getTranslations('my_projects')
 
     return {
       title: t('not_found'),
