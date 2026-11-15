@@ -46,3 +46,7 @@ button,
 ::placeholder {
   @apply select-none;
 }
+
+.glass-effect {
+  @apply border-[1.5px] border-foreground/20 light:border-2 light:border-background-content bg-background-content/20 light:shadow-sm shadow-foreground/10 backdrop-blur-[2px];
+}
