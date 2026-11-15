@@ -33,7 +33,7 @@ export function ProjectModal({ project }: { project: Project }) {
   )
 }
 
-const Dialog = tw.dialog`-translate-1/2 top-1/2 left-1/2 w-[calc(100%-var(--spacing)*4)] max-w-lg rounded-2xl bg-transparent p-6 ring-[0.5px] ring-foreground/30 backdrop-blur-sm backdrop:bg-background/90`
+const Dialog = tw.dialog`-translate-1/2 top-1/2 left-1/2 w-[calc(100%-var(--spacing)*4)] max-w-lg rounded-2xl bg-transparent p-6 ring-[0.5px] ring-foreground/30 backdrop-blur-sm backdrop:bg-background/75`
 
 const Content = tw.div`fade-in flex flex-col items-center justify-center gap-3 fill-mode-forwards text-foreground duration-1000 motion-safe:animate-in`
 
