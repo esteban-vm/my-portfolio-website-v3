@@ -25,5 +25,5 @@ export function ProjectLink({ project }: { project: Project }) {
 }
 
 const Wrapper = tw.div`flex h-1/3 w-full snap-start scroll-m-0 items-center justify-center gap-1.5 bg-background px-2.5 pt-1 hover:bg-background-content`
-const Title = tw.span`font-semibold font-wellfleet text-sky-500 uppercase dark:text-sky-300`
+const Title = tw.span`line-clamp-1 font-semibold font-wellfleet text-sky-500 uppercase dark:text-sky-300`
 const Description = tw.p`line-clamp-2 text-pretty text-foreground/80 text-sm leading-4`
