@@ -4,8 +4,8 @@ import { useTheme } from '@teispace/next-themes'
 import { useEffect, useRef } from 'react'
 
 interface ParticlesProps {
-  quantity?: number
-  className?: string
+  quantity: number
+  className: string
 }
 
 interface Particle {
@@ -15,9 +15,9 @@ interface Particle {
   vy: number
 }
 
-export function Particles({ quantity = 120, className }: ParticlesProps) {
+export function Particles({ quantity, className }: ParticlesProps) {
   const { theme } = useTheme()
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
     const canvas = canvasRef.current
