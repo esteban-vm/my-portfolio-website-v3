@@ -25,8 +25,7 @@
 }
 
 * {
-  scrollbar-color: var(--color-foreground);
-  scrollbar-width: thin;
+  @apply scroll-smooth scrollbar-thin scrollbar-thumb-foreground/30;
 
   &:focus-visible {
     @apply outline-foreground/50 outline-1 outline-offset-2;
