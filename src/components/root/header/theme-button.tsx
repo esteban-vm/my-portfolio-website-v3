@@ -13,12 +13,13 @@ export function ThemeButton() {
   const t = useTranslations('header.theme_button')
   const { resolvedTheme, theme, setTheme } = useTheme()
 
+  const onThemeChange = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+    navigator.vibrate(100)
+  }
+
   return (
-    <CircleButton
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      title={resolvedTheme === 'dark' ? t('light') : t('dark')}
-      type='button'
-    >
+    <CircleButton onClick={onThemeChange} title={resolvedTheme === 'dark' ? t('light') : t('dark')} type='button'>
       {resolvedTheme === 'dark' ? <FaSun /> : <FaMoon />}
     </CircleButton>
   )

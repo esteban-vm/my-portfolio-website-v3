@@ -16,6 +16,7 @@ export function LanguageButton() {
 
   const onLanguageChange = () => {
     execute({ lang: locale === 'en' ? 'es' : 'en' })
+    navigator.vibrate(100)
   }
 
   return (
