@@ -28,7 +28,5 @@ export function Header() {
 }
 
 const Wrapper = tw.header`sticky inset-x-0 top-2 z-10 flex items-center justify-between rounded-2xl bg-background-content/30 p-3 ring-[0.5px] ring-foreground/30 backdrop-blur-[1px]`
-
 const Link = tw.a`flex aspect-square w-12 items-center justify-center rounded-xl border border-foreground/30 bg-background font-wellfleet hover:bg-background-content`
-
 const Loading = tw.div`flex size-12 cursor-wait items-center justify-center rounded-full border border-foreground/30 bg-background`

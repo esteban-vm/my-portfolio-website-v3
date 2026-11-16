@@ -15,7 +15,6 @@ export function ThemeButton() {
 
   const onThemeChange = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
-    navigator.vibrate(100)
   }
 
   return (
