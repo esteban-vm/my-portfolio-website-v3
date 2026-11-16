@@ -27,6 +27,7 @@ export function Particles({ quantity, className }: ParticlesProps) {
     if (!ctx) return
 
     let frameId: number
+    const v = 0.25
     const particles: Particle[] = []
 
     const resize = () => {
@@ -41,8 +42,8 @@ export function Particles({ quantity, className }: ParticlesProps) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        vx: (Math.random() - v) * v,
+        vy: (Math.random() - v) * v,
       })
     }
 
