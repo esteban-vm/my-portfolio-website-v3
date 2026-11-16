@@ -4,7 +4,7 @@ import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
-import { Footer, Header } from '@/components/root'
+import { Footer, Header, Particles } from '@/components/root'
 import { CONTAINER_ID, MODAL_ROOT_ID, NAME, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Geist, Wellfleet } from '@/lib/fonts'
 import '@/styles/css/globals.css'
@@ -63,6 +63,7 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
         >
           <NextIntlClientProvider>
             <Background>
+              <Particles className='absolute inset-0' />
               <Container id={CONTAINER_ID}>
                 <Header />
                 <Content>{children}</Content>
