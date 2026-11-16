@@ -63,7 +63,6 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
         >
           <NextIntlClientProvider>
             <Background>
-              {/* <Particles className='fixed inset-0' quantity={120} /> */}
               <Container id={CONTAINER_ID}>
                 <Header />
                 <Content>{children}</Content>
