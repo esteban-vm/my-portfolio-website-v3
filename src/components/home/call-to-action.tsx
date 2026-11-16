@@ -12,7 +12,7 @@ export async function CallToAction() {
       <Subtitle>{t('subtitle')}</Subtitle>
       <Button type='button'>
         <FaDownload />
-        <span>{t('button')}</span>
+        <span className='font-geist font-semibold uppercase'>{t('button')}</span>
       </Button>
     </GridCard>
   )
@@ -20,4 +20,4 @@ export async function CallToAction() {
 
 const Title = tw.h1`text-balance font-bold text-3xl lg:text-4xl`
 const Subtitle = tw.h2`text-pretty text-foreground/80 text-lg lg:text-xl`
-const Button = tw.button`flex cursor-pointer items-center gap-2 rounded-lg border border-foreground/30 px-3 py-1.5 font-geist text-sm hover:bg-background`
+const Button = tw.button`flex cursor-pointer items-center gap-2 rounded-md bg-teal-500 px-3 py-1.5 text-background-content text-sm hover:opacity-80 dark:bg-teal-300`
