@@ -4,7 +4,7 @@ import { getTheme, getThemeScriptProps } from '@teispace/next-themes/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
-import { Footer, Header, Particles } from '@/components/root'
+import { Footer, Header } from '@/components/root'
 import { CONTAINER_ID, MODAL_ROOT_ID, NAME, THEME_COOKIE, THEME_STORAGE } from '@/lib/constants'
 import { Geist, Wellfleet } from '@/lib/fonts'
 import '@/styles/css/globals.css'
@@ -63,7 +63,7 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
         >
           <NextIntlClientProvider>
             <Background>
-              <Particles className='fixed inset-0' quantity={120} />
+              {/* <Particles className='fixed inset-0' quantity={120} /> */}
               <Container id={CONTAINER_ID}>
                 <Header />
                 <Content>{children}</Content>
@@ -79,6 +79,6 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
   )
 }
 
-const Background = tw.div`fixed inset-0 size-full overflow-auto bg-background text-foreground`
+const Background = tw.div`grid-bg fixed inset-0 size-full overflow-auto bg-background text-foreground motion-safe:animate-grid-move`
 const Container = tw.div`relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist`
 const Content = tw.div`mt-4 mb-2 flex grow flex-col items-center justify-center`

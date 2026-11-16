@@ -22,6 +22,7 @@
   --color-background: var(--background);
   --color-background-content: var(--background-content);
   --color-foreground: var(--foreground);
+  --animate-grid-move: grid-move 8s linear infinite;
 }
 
 * {
@@ -42,4 +43,22 @@ label,
 button,
 ::placeholder {
   @apply select-none;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(--alpha(var(--color-foreground) / 12%) 1px, transparent 1px),
+    linear-gradient(90deg, --alpha(var(--color-foreground) / 12%) 1px, transparent 1px);
+
+  @apply bg-size-[40px_40px];
+}
+
+@keyframes grid-move {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 40px 40px;
+  }
 }
