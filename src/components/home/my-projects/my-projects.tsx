@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import tw from 'tailwind-styled-components'
-import { projects } from '@/lib/constants'
+import { PROJECTS } from '@/lib/constants'
 import { GridCard } from '@/styles/styled'
 import { ProjectLink } from './project-link'
 
@@ -11,7 +11,7 @@ export async function MyProjects() {
     <GridCard className='items-start'>
       <Title>{t('title')}</Title>
       <Content>
-        {projects.map((project) => (
+        {PROJECTS.map((project) => (
           <ProjectLink key={project.slug} project={project} />
         ))}
       </Content>

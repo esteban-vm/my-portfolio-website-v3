@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
-import { projects } from '@/lib/constants'
+import { PROJECTS } from '@/lib/constants'
 
 export const instant = false
 
@@ -9,7 +9,7 @@ export type ProjectPageProps = PageProps<'/projects/[slug]'>
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params
-  const project = projects.find((p) => p.slug === slug)
+  const project = PROJECTS.find((p) => p.slug === slug)
 
   if (!project) {
     const t = await getTranslations('my_projects')
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params
 
-  const project = projects.find((p) => p.slug === slug)
+  const project = PROJECTS.find((p) => p.slug === slug)
   if (!project) notFound()
 
   return (

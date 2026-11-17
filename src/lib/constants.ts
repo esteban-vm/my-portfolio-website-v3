@@ -17,7 +17,7 @@ export const NAME = 'Esteban V.M.'
 export const EMAIL = 'estebanvm1990@gmail.com'
 
 // Projects
-export const projects: Project[] = [
+export const PROJECTS: Project[] = [
   { title: 'Project 1', slug: 'project_1' },
   { title: 'Project 2', slug: 'project_2' },
   { title: 'Project 3', slug: 'project_3' },
