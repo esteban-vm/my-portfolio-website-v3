@@ -78,6 +78,6 @@ export default async function RootLayout({ children, modals }: LayoutProps<'/'>)
   )
 }
 
-const Background = tw.div`grid-bg fixed inset-0 size-full overflow-auto bg-background text-foreground motion-safe:animate-grid-move`
+const Background = tw.div`grid-bg fixed inset-0 size-full overflow-auto bg-background text-foreground`
 const Container = tw.div`relative mx-auto flex min-h-full w-full max-w-7xl flex-col px-2 font-geist`
 const Content = tw.div`mt-4 mb-2 flex grow flex-col items-center justify-center`
