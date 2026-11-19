@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import tw from 'tailwind-styled-components'
-import { cn } from '@/lib/ui'
+import { cn } from '@/lib/utils'
 
 interface SocialLinkProps {
   title: string
