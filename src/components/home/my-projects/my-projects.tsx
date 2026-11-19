@@ -1,16 +1,16 @@
 import { PROJECTS } from '@/lib/constants'
 import { GridCard } from '@/styles/styled'
+import { ProjectContainer } from './project-container'
 import { ProjectLink } from './project-link'
-import { ProjectList } from './project-list'
 
 export function MyProjects() {
   return (
     <GridCard className='items-start'>
-      <ProjectList>
+      <ProjectContainer>
         {PROJECTS.map((project) => (
           <ProjectLink key={project.slug} project={project} />
         ))}
-      </ProjectList>
+      </ProjectContainer>
     </GridCard>
   )
 }

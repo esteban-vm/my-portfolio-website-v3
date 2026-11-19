@@ -6,11 +6,11 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import tw from 'tailwind-styled-components'
 import { PROJECT_CONTAINER_HEIGHT, PROJECT_LINK_HEIGHT, PROJECTS } from '@/lib/constants'
 
-interface ProjectListProps {
+interface ProjectContainerProps {
   children: ReactNode
 }
 
-export function ProjectList({ children }: ProjectListProps) {
+export function ProjectContainer({ children }: ProjectContainerProps) {
   const [count, setCount] = useState(3)
   const t = useTranslations('my_projects')
   const containerRef = useRef<HTMLDivElement>(null)
