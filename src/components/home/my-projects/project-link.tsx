@@ -2,11 +2,12 @@ import type { Project } from '@/types'
 import Link from 'next/link'
 import { BsArrowsFullscreen } from 'react-icons/bs'
 import tw from 'tailwind-styled-components'
+import { PROJECT_LINK_HEIGHT } from '@/lib/constants'
 
 export function ProjectLink({ project }: { project: Project }) {
   return (
     <Link href={`/projects/${project.slug}`} passHref scroll={false}>
-      <Wrapper>
+      <Wrapper style={{ height: PROJECT_LINK_HEIGHT }}>
         <div className='h-full grow'>
           <Title>{project.title}</Title>
           <Description>
@@ -24,6 +25,6 @@ export function ProjectLink({ project }: { project: Project }) {
   )
 }
 
-const Wrapper = tw.div`flex h-1/3 w-full snap-start scroll-m-0 items-center justify-center gap-1.5 bg-background px-3 pt-1 hover:bg-background-content`
+const Wrapper = tw.div`flex w-full snap-start scroll-m-0 items-center justify-center gap-1.5 bg-background px-3 pt-1 hover:bg-background-content`
 const Title = tw.span`line-clamp-1 font-semibold font-wellfleet text-sky-500 uppercase dark:text-sky-300`
 const Description = tw.p`line-clamp-2 text-pretty text-foreground/80 text-sm leading-4`
