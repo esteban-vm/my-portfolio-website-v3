@@ -11,8 +11,6 @@ export const THEME_COOKIE = 'MY_PORTFOLIO_THEME'
 // UI
 export const MODAL_ROOT_ID = 'modal-root'
 export const CONTAINER_ID = 'container'
-export const PROJECT_CONTAINER_HEIGHT = 208
-export const PROJECT_LINK_HEIGHT = PROJECT_CONTAINER_HEIGHT / 3
 
 // Data
 export const NAME = 'Esteban V.M.'
