@@ -47,12 +47,12 @@ export function ProjectContainer({ children }: ProjectContainerProps) {
       <Title>
         {t('title')} ({count}/{PROJECTS.length})
       </Title>
-      <List ref={containerRef} style={{ height: PROJECT_CONTAINER_HEIGHT }}>
+      <Wrapper ref={containerRef} style={{ height: PROJECT_CONTAINER_HEIGHT }}>
         {children}
-      </List>
+      </Wrapper>
     </>
   )
 }
 
 const Title = tw.h2`mb-2 font-wellfleet text-lg uppercase lg:text-xl`
-const List = tw.div`w-full snap-y snap-mandatory overflow-auto rounded-lg border border-foreground/10`
+const Wrapper = tw.div`w-full snap-y snap-mandatory overflow-auto rounded-lg border border-foreground/10`
