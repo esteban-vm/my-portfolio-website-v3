@@ -1,6 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
+import { useTranslations } from 'next-intl'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import tw from 'tailwind-styled-components'
 import { PROJECT_CONTAINER_HEIGHT, PROJECT_LINK_HEIGHT, PROJECTS } from '@/lib/constants'
@@ -11,6 +12,7 @@ interface ProjectListProps {
 
 export function ProjectList({ children }: ProjectListProps) {
   const [count, setCount] = useState(3)
+  const t = useTranslations('my_projects')
   const containerRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = useCallback(() => {
@@ -36,25 +38,21 @@ export function ProjectList({ children }: ProjectListProps) {
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
-
-    const handleScrollEvent = () => {
-      handleScroll()
-    }
-
-    container.addEventListener('scroll', handleScrollEvent)
-
-    return () => container.removeEventListener('scroll', handleScrollEvent)
+    container.addEventListener('scroll', handleScroll)
+    return () => container.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
-  useEffect(() => {
-    console.log({ count })
-  }, [count])
-
   return (
-    <Wrapper ref={containerRef} style={{ height: PROJECT_CONTAINER_HEIGHT }}>
-      {children}
-    </Wrapper>
+    <>
+      <Title>
+        {t('title')} ({count}/{PROJECTS.length})
+      </Title>
+      <List ref={containerRef} style={{ height: PROJECT_CONTAINER_HEIGHT }}>
+        {children}
+      </List>
+    </>
   )
 }
 
-const Wrapper = tw.div`w-full snap-y snap-mandatory overflow-auto rounded-lg border border-foreground/10`
+const Title = tw.h2`mb-2 font-wellfleet text-lg uppercase lg:text-xl`
+const List = tw.div`w-full snap-y snap-mandatory overflow-auto rounded-lg border border-foreground/10`
