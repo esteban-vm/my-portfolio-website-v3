@@ -9,14 +9,7 @@ export function ProjectLink({ project }: { project: Project }) {
       <Wrapper>
         <div className='h-full grow'>
           <Title>{project.title}</Title>
-          <Description>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil illo tempora rerum, incidunt assumenda sint
-            magni hic alias veniam, ut autem reiciendis doloribus, quos rem fugiat sequi suscipit quae aspernatur ipsa
-            ducimus aliquid maiores expedita beatae vitae. Nulla voluptatum iste eum, sequi enim aspernatur autem at,
-            neque molestiae velit laudantium officiis, repudiandae architecto quisquam. Labore voluptates atque
-            molestiae fugiat natus tempora nihil odit, magnam quibusdam facere est perspiciatis vitae corrupti officia
-            et temporibus totam nobis veniam! Eligendi, soluta. Et, sunt.
-          </Description>
+          <Description>{project.description}</Description>
         </div>
         <BsArrowsFullscreen className='size-4 shrink-0 text-current/60' />
       </Wrapper>
