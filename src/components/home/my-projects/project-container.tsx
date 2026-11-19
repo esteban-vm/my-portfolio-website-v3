@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 import { useTranslations } from 'next-intl'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import tw from 'tailwind-styled-components'
-import { PROJECT_CONTAINER_HEIGHT, PROJECT_LINK_HEIGHT, PROJECTS } from '@/lib/constants'
+import { PROJECTS } from '@/lib/constants'
 
 interface ProjectContainerProps {
   children: ReactNode
@@ -13,21 +13,24 @@ interface ProjectContainerProps {
 export function ProjectContainer({ children }: ProjectContainerProps) {
   const [count, setCount] = useState(3)
   const t = useTranslations('my_projects')
-  const containerRef = useRef<HTMLDivElement>(null)
+  const wrapperRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = useCallback(() => {
-    const container = containerRef.current
+    const container = wrapperRef.current
     if (!container) return
 
+    const link = container.querySelector('a')
+    if (!link) return
+
     const { scrollTop } = container
-    const elementsScrolled = Math.floor(scrollTop / PROJECT_LINK_HEIGHT)
+    const linksScrolled = Math.ceil(scrollTop / link.offsetHeight)
 
     let newCount: number
 
     if (scrollTop > 0) {
-      newCount = Math.min(PROJECTS.length, 3 + elementsScrolled)
+      newCount = Math.min(PROJECTS.length, 3 + linksScrolled)
     } else if (scrollTop < 0) {
-      newCount = Math.max(3, 3 - Math.floor(Math.abs(elementsScrolled)))
+      newCount = Math.max(3, 3 - Math.floor(Math.abs(linksScrolled)))
     } else {
       newCount = 3
     }
@@ -36,8 +39,9 @@ export function ProjectContainer({ children }: ProjectContainerProps) {
   }, [])
 
   useEffect(() => {
-    const container = containerRef.current
+    const container = wrapperRef.current
     if (!container) return
+
     container.addEventListener('scroll', handleScroll)
     return () => container.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
@@ -47,12 +51,10 @@ export function ProjectContainer({ children }: ProjectContainerProps) {
       <Title>
         {t('title')} ({count}/{PROJECTS.length})
       </Title>
-      <Wrapper ref={containerRef} style={{ height: PROJECT_CONTAINER_HEIGHT }}>
-        {children}
-      </Wrapper>
+      <Wrapper ref={wrapperRef}>{children}</Wrapper>
     </>
   )
 }
 
 const Title = tw.h2`mb-2 font-wellfleet text-lg uppercase lg:text-xl`
-const Wrapper = tw.div`w-full snap-y snap-mandatory overflow-auto rounded-lg border border-foreground/10`
+const Wrapper = tw.div`h-52 w-full snap-y snap-mandatory overflow-auto rounded-lg border border-foreground/10`
