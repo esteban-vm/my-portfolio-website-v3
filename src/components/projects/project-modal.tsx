@@ -1,6 +1,6 @@
 'use client'
 
-import type { Project } from '@/types'
+import type { Project } from '@/types/projects'
 import { useRouter } from 'next/navigation'
 import { use, useEffect, useRef } from 'react'
 import { browser, createPortal } from 'react-dom'

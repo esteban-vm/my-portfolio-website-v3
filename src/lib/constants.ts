@@ -1,4 +1,4 @@
-import type { Project } from '@/types'
+import type { Project } from '@/types/projects'
 
 // i18n
 export const LOCALES = ['en', 'es'] as const

@@ -1,4 +1,4 @@
-import type { Project } from '@/types'
+import type { Project } from '@/types/projects'
 import Link from 'next/link'
 import { BsArrowsFullscreen } from 'react-icons/bs'
 import tw from 'tailwind-styled-components'
