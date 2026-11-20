@@ -29,18 +29,13 @@ export function EmailLink() {
       <div className='grow'>
         <Link href={`mailto:${EMAIL}`}>{EMAIL}</Link>
       </div>
-      <button
-        className='text-current/60 enabled:cursor-pointer enabled:hover:opacity-90 [&_svg]:size-4'
-        disabled={copied}
-        onClick={onCopy}
-        title={copied ? t('copied') : t('copy')}
-        type='button'
-      >
-        {copied ? <FaCheck className='text-emerald-500 dark:text-emerald-300' /> : <FaRegCopy />}
-      </button>
+      <Button disabled={copied} onClick={onCopy} title={copied ? t('copied') : t('copy')} type='button'>
+        {copied ? <FaCheck className='text-emerald-600 dark:text-emerald-400' /> : <FaRegCopy />}
+      </Button>
     </Wrapper>
   )
 }
 
 const Wrapper = tw.div`flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm`
-const Link = tw.a`font-semibold text-sky-500 text-sm hover:underline hover:opacity-90 dark:text-sky-300`
+const Link = tw.a`font-semibold text-sky-600 text-sm hover:underline hover:opacity-90 dark:text-sky-400`
+const Button = tw.button`text-current/60 enabled:cursor-pointer enabled:hover:opacity-90 [&_svg]:size-4`

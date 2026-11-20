@@ -58,7 +58,7 @@ export function DateTime() {
 
   return (
     <>
-      <FaLocationDot className='size-10 text-red-500 dark:text-red-400' />
+      <FaLocationDot className='size-10 text-red-500' />
       <time className='text-3xl' dateTime={time}>
         {time}
       </time>
