@@ -29,7 +29,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'VidTube',
-    description: 'Clon de YouTube',
+    description:
+      'Clon de YouTube hecho con Next.js, DaisyUI y TypeScript. Cuenta con exploración de videos y cambio de tema a claro u oscuro según preferencias del usuario.',
     slug: 'project_2',
     repo: 'https://github.com/esteban-vm/youtube-clone',
     demo: 'https://youtube-clone-six-liard.vercel.app/',
