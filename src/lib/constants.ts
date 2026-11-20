@@ -12,7 +12,7 @@ export const THEME_COOKIE = 'MY_PORTFOLIO_THEME'
 export const MODAL_ROOT_ID = 'modal-root'
 export const CONTAINER_ID = 'container'
 
-// Data
+// Metadata
 export const NAME = 'Esteban V.M.'
 export const EMAIL = 'estebanvm1990@gmail.com'
 
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Teslo Shop',
     description:
-      'Tienda virtual de ropas ficticia hecha con Next.js, TailwindCSS, Prisma y PostgreSQL. Cuenta con exploración del catálogo de artículos en base al género, autenticación de clientes, protección de rutas, permisos basados en roles y cambio de tema a claro u oscuro según preferencias del usuario.',
+      'Tienda virtual de ropas ficticia hecha con Next.js App Router, DaisyUI (TailwindCSS), Prisma y PostgreSQL. Cuenta con exploración del catálogo de artículos en base al género, autenticación de clientes, protección de rutas, permisos basados en roles y cambio de tema a claro u oscuro según preferencias del usuario.',
     slug: 'project_1',
     repo: 'https://github.com/esteban-vm/my-teslo-shop',
     demo: 'https://my-teslo-shop.vercel.app/',
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'VidTube',
     description:
-      'Clon de YouTube hecho con Next.js, DaisyUI y TypeScript. Cuenta con exploración de videos y cambio de tema a claro u oscuro según preferencias del usuario.',
+      'Clon de YouTube hecho con Next.js App Router, DaisyUI (TailwindCSS) y TypeScript. Hace uso de la API de YouTube y cuenta con buscador de videos, exploración temática de videos y cambio de tema a claro u oscuro persistente en LocalStorage.',
     slug: 'project_2',
     repo: 'https://github.com/esteban-vm/youtube-clone',
     demo: 'https://youtube-clone-six-liard.vercel.app/',
