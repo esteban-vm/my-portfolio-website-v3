@@ -11,7 +11,7 @@ export function ProjectLink({ project }: { project: Project }) {
           <Title>{project.title}</Title>
           <Description>{project.description}</Description>
         </div>
-        <BsArrowsFullscreen className='size-4 shrink-0 text-current/60' />
+        <BsArrowsFullscreen className='size-4 shrink-0 stroke-1 text-teal-600 dark:text-teal-400' />
       </Wrapper>
     </Link>
   )
