@@ -1,8 +1,11 @@
-export interface Project {
+export interface BaseProject {
   title: string
-  description: string
-  slug: string
   repo: string
   demo: string
   screenshot: string
+}
+
+export interface Project extends BaseProject {
+  description: string
+  slug: string
 }
