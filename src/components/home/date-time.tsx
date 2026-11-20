@@ -64,9 +64,7 @@ export function DateTime() {
       </time>
       <time dateTime={date}>{date}</time>
       <span className='text-sm'>{temp_c.toLocaleString(locale, { style: 'unit', unit: 'celsius' })}</span>
-      <span className='line-clamp-1 text-sm' title={text}>
-        {text}
-      </span>
+      <span className='line-clamp-1 text-sm'>{text}</span>
       <span className='text-sm'>
         {locale === 'es' ? 'Asunción' : name}, {country}
       </span>
