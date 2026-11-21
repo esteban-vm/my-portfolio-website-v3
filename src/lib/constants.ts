@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Teslo Shop',
     description:
-      'Tienda virtual de ropas ficticia hecha con Next.js App Router, DaisyUI (TailwindCSS), Prisma y PostgreSQL. Cuenta con exploración del catálogo de artículos en base al género, autenticación de clientes, protección de rutas, permisos basados en roles y cambio de tema a claro u oscuro según preferencias del usuario.',
+      'Tienda virtual de ropas ficticia hecha con Next.js App Router, DaisyUI (TailwindCSS), Prisma ORM y PostgreSQL. Cuenta con exploración del catálogo de artículos en base al género, autenticación de clientes y administradores, protección de rutas, permisos basados en roles y cambio de tema a claro u oscuro según preferencias del usuario. Los datos son traídos de una base de datos PostgreSQL externa alojada en NeonDB y las imágenes de productos nuevos se suben a una nube de Cloudinary',
     slug: 'project_1',
     repo: 'https://github.com/esteban-vm/my-teslo-shop',
     demo: 'https://my-teslo-shop.vercel.app/',
@@ -38,15 +38,17 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Nextflix',
-    description: 'Clon de Netflix',
+    description:
+      'Clon de Netflix hecho con Next.js App Router, Shadcn (TailwindCSS), Prisma ORM y TypeScript. Cuenta con autenticación básica (correo electrónico y contraseña), exploración de películas y tendencias actuales (con datos de ejemplo traídos de una base de datos PostgreSQL externa alojada en NeonDB y archivos multimedia alojados en Cloudinary), posibilidad de añadir múltiples perfiles por usuario y agregar favoritos.',
     slug: 'project_3',
     repo: 'https://github.com/esteban-vm/nextflix',
     demo: 'https://nextflix-jade.vercel.app/',
     screenshot: '',
   },
   {
-    title: 'React AI Chatbot',
-    description: 'Chatbot de IA',
+    title: 'Chatbot de IA',
+    description:
+      'Chatbot de IA hecho con Vite, React y TypeScript. Hace uso de la API de Gemini para generar las conversaciones, cuenta con posibilidad de cambio de idioma y tema de la interfaz, además de poder escribir y recibir mensajes renderizados como Markdown e instalar la aplicación de manera local como una PWA.',
     slug: 'project_4',
     repo: 'https://github.com/esteban-vm/react-ai-chatbot',
     demo: 'https://react-ai-chatbot-tawny.vercel.app/',
