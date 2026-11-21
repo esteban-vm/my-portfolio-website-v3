@@ -57,4 +57,4 @@ export function ProjectContainer({ children }: ProjectContainerProps) {
 }
 
 const Title = tw.h2`mb-2 font-wellfleet text-lg uppercase lg:text-xl`
-const Wrapper = tw.div`h-52 w-full snap-y snap-mandatory overflow-y-auto rounded-lg border border-foreground/10`
+const Wrapper = tw.div`h-52 w-full snap-y snap-mandatory overflow-y-auto rounded-lg ring-1 ring-foreground/10`

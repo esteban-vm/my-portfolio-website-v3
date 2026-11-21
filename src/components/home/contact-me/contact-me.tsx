@@ -43,4 +43,4 @@ export async function ContactMe() {
 
 const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-lg uppercase lg:text-xl`
 const Label = tw.h3`text-foreground/75 text-sm`
-const Status = tw.div`flex items-center gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 font-semibold text-sm text-teal-600 uppercase dark:text-teal-400`
+const Status = tw.div`flex items-center gap-2 rounded-lg bg-background px-3 py-2 font-semibold text-sm text-teal-600 uppercase ring-1 ring-foreground/10 dark:text-teal-400`

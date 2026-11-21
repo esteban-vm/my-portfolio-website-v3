@@ -36,6 +36,6 @@ export function EmailLink() {
   )
 }
 
-const Wrapper = tw.div`flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm`
+const Wrapper = tw.div`flex items-center justify-between gap-2 rounded-lg bg-background px-3 py-2 text-sm ring-1 ring-foreground/10`
 const Link = tw.a`font-semibold text-sky-600 text-sm hover:underline hover:opacity-90 dark:text-sky-400`
 const Button = tw.button`text-current/60 enabled:cursor-pointer enabled:hover:opacity-90 [&_svg]:size-4`
