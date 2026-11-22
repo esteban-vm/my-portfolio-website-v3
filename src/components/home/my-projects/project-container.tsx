@@ -6,11 +6,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import tw from 'tailwind-styled-components'
 import { PROJECTS } from '@/lib/constants'
 
-interface ProjectContainerProps {
-  children: ReactNode
-}
-
-export function ProjectContainer({ children }: ProjectContainerProps) {
+export function ProjectContainer({ children }: { children: ReactNode }) {
   const [count, setCount] = useState(3)
   const t = useTranslations('my_projects')
   const wrapperRef = useRef<HTMLDivElement>(null)
@@ -23,7 +19,7 @@ export function ProjectContainer({ children }: ProjectContainerProps) {
     if (!link) return
 
     const { scrollTop } = container
-    const linksScrolled = Math.ceil(scrollTop / link.offsetHeight)
+    const linksScrolled = Math.floor(scrollTop / link.offsetHeight)
 
     let newCount: number
 
