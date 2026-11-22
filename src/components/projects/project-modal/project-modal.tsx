@@ -29,7 +29,7 @@ export function ProjectModal({ project }: { project: Project }) {
         <p>{project.title}</p>
         <p>{project.description}</p>
       </Content>
-      <form className='absolute right-3 bottom-3 md:top-3' method='dialog'>
+      <form className='absolute top-3 right-3' method='dialog'>
         <CircleButton className='[&>svg]:size-3/5' type='submit'>
           <IoCloseSharp className='text-red-500' />
         </CircleButton>
