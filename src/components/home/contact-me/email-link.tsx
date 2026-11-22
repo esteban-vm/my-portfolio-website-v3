@@ -8,14 +8,13 @@ import tw from 'tailwind-styled-components'
 import { EMAIL } from '@/lib/constants'
 
 export function EmailLink() {
-  const t = useTranslations('contact_me')
+  const t = useTranslations('contact_me.email_link')
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    if (copied) {
-      const timer = setTimeout(() => setCopied(false), 2_000)
-      return () => clearTimeout(timer)
-    }
+    if (!copied) return
+    const timer = setTimeout(() => setCopied(false), 2_000)
+    return () => clearTimeout(timer)
   }, [copied])
 
   const onCopy = async () => {
