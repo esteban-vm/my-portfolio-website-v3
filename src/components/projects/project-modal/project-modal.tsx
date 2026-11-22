@@ -4,10 +4,9 @@ import type { Project } from '@/types/projects'
 import { useRouter } from 'next/navigation'
 import { use, useEffect, useRef } from 'react'
 import { browser, createPortal } from 'react-dom'
-import { IoCloseSharp } from 'react-icons/io5'
+import { IoArrowBackSharp, IoCloseSharp } from 'react-icons/io5'
 import tw from 'tailwind-styled-components'
 import { MODAL_ROOT_ID } from '@/lib/constants'
-import { CircleButton } from '@/styles/styled'
 
 export function ProjectModal({ project }: { project: Project }) {
   use(browser())
@@ -24,20 +23,26 @@ export function ProjectModal({ project }: { project: Project }) {
   return createPortal(
     <Dialog onClose={router.back} ref={dialogRef}>
       <Content>
-        <h2 className='italic'>(En construcción…)</h2>
-        <p>ProjectModal</p>
-        <p>{project.title}</p>
-        <p>{project.description}</p>
+        <Details>
+          <h2 className='italic'>(En construcción…)</h2>
+          <p>ProjectModal</p>
+          <p>{project.title}</p>
+          <p>{project.description}</p>
+        </Details>
+        <Form method='dialog'>
+          <Button type='submit'>
+            <IoCloseSharp className='not-lg:hidden' />
+            <IoArrowBackSharp className='lg:hidden' />
+          </Button>
+        </Form>
       </Content>
-      <form className='absolute top-3 right-3' method='dialog'>
-        <CircleButton className='[&>svg]:size-3/5' type='submit'>
-          <IoCloseSharp className='text-red-500' />
-        </CircleButton>
-      </form>
     </Dialog>,
     document.getElementById(MODAL_ROOT_ID)!
   )
 }
 
-const Dialog = tw.dialog`-translate-1/2 relative top-1/2 left-1/2 h-[calc(100%-var(--spacing)*4.5)] max-h-full w-[calc(100%-var(--spacing)*4.5)] max-w-7xl rounded-2xl bg-transparent p-6 ring-[0.5px] ring-foreground backdrop-blur-sm backdrop:bg-background/75`
-const Content = tw.div`fade-in flex flex-col items-center justify-center gap-3 fill-mode-forwards text-foreground duration-1000 motion-safe:animate-in`
+const Dialog = tw.dialog`-translate-1/2 relative top-1/2 left-1/2 h-[calc(100%-var(--spacing)*5)] max-h-full w-[calc(100%-var(--spacing)*4.5)] max-w-7xl rounded-2xl bg-transparent p-4 ring-[0.5px] ring-foreground backdrop-blur-sm backdrop:bg-background/75`
+const Content = tw.div`flex size-full flex-col gap-3 text-foreground lg:flex-col-reverse`
+const Details = tw.div`fade-in grow border border-amber-500 fill-mode-forwards duration-1000 motion-safe:animate-in`
+const Form = tw.form`shrink-0 self-center lg:self-end`
+const Button = tw.button`flex size-12 cursor-pointer items-center justify-center rounded-lg bg-background ring-1 ring-foreground/30 hover:bg-background-content [&_svg]:size-3/5`
