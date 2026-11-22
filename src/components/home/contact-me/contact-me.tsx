@@ -3,6 +3,7 @@ import { FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
 import tw from 'tailwind-styled-components'
 import { GridCard } from '@/styles/styled'
 import { EmailLink } from './email-link'
+import { MyStatus } from './my-status'
 import { SocialLink } from './social-link'
 
 export async function ContactMe() {
@@ -10,7 +11,7 @@ export async function ContactMe() {
 
   return (
     <GridCard>
-      <div className='mx-auto flex w-full max-w-md flex-col'>
+      <Content>
         <Title>{t('title')}</Title>
         <Label>{t('email')}</Label>
         <EmailLink />
@@ -31,16 +32,12 @@ export async function ContactMe() {
             title='LinkedIn'
           />
         </div>
-        <Label className='mt-1.5'>{t('status')}</Label>
-        <Status>
-          <div className='size-3 rounded-full bg-current motion-safe:animate-pulse' />
-          <span>{t('status_text')}</span>
-        </Status>
-      </div>
+        <MyStatus />
+      </Content>
     </GridCard>
   )
 }
 
+const Content = tw.div`mx-auto flex w-full max-w-md flex-col`
 const Title = tw.h2`mb-2 line-clamp-1 font-wellfleet text-lg uppercase lg:text-xl`
 const Label = tw.h3`text-foreground/75 text-sm`
-const Status = tw.div`flex items-center gap-2 rounded-lg bg-background px-3 py-2 font-semibold text-sm text-teal-600 uppercase ring-1 ring-foreground/10 dark:text-teal-400`
