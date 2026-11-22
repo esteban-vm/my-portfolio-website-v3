@@ -44,10 +44,14 @@
     "title": "Contacto",
     "email": "Correo electrónico",
     "networks": "Redes profesionales",
-    "status": "Estado",
-    "status_text": "Disponible",
-    "copy": "Copiar correo al portapapeles",
-    "copied": "¡Correo copiado!"
+    "email_link": {
+      "copy": "Copiar correo al portapapeles",
+      "copied": "¡Correo copiado!"
+    },
+    "my_status": {
+      "label": "Estado",
+      "value": "Disponible"
+    }
   },
   "my_projects": {
     "title": "Proyectos",

@@ -44,10 +44,14 @@
     "title": "Contact",
     "email": "Email",
     "networks": "Professional networks",
-    "status": "Status",
-    "status_text": "Available",
-    "copy": "Copy email to clipboard",
-    "copied": "Email copied!"
+    "email_link": {
+      "copy": "Copy email to clipboard",
+      "copied": "Email copied!"
+    },
+    "my_status": {
+      "label": "Status",
+      "value": "Available"
+    }
   },
   "my_projects": {
     "title": "Projects",
