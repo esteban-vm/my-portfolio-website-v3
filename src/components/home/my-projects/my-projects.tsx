@@ -7,8 +7,8 @@ export function MyProjects() {
   return (
     <GridCard className='items-start'>
       <ProjectContainer>
-        {PROJECTS.map((project) => (
-          <ProjectLink key={project.slug} project={project} />
+        {PROJECTS.map((project, index) => (
+          <ProjectLink index={index + 1} key={project.slug} project={project} />
         ))}
       </ProjectContainer>
     </GridCard>
