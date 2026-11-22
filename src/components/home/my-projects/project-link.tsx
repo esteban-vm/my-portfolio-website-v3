@@ -3,12 +3,14 @@ import Link from 'next/link'
 import { BsArrowsFullscreen } from 'react-icons/bs'
 import tw from 'tailwind-styled-components'
 
-export function ProjectLink({ project }: { project: Project }) {
+export function ProjectLink({ index, project }: { index: number; project: Project }) {
   return (
     <Link href={`/projects/${project.slug}`} passHref scroll={false}>
       <Wrapper>
         <div className='h-full grow'>
-          <Title>{project.title}</Title>
+          <Title>
+            {index}. {project.title}
+          </Title>
           <Description>{project.description}</Description>
         </div>
         <BsArrowsFullscreen className='size-4 shrink-0 stroke-1 text-teal-600 dark:text-teal-400' />
