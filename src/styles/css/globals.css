@@ -37,6 +37,10 @@
   }
 }
 
+body {
+  counter-reset: section;
+}
+
 a,
 img,
 label,
