@@ -10,10 +10,8 @@ interface ProjectContainerProps {
   children: ReactNode
 }
 
-const initialCount = 3
-
 export function ProjectContainer({ children }: ProjectContainerProps) {
-  const [count, setCount] = useState(initialCount)
+  const [count, setCount] = useState(3)
   const t = useTranslations('my_projects')
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -30,11 +28,11 @@ export function ProjectContainer({ children }: ProjectContainerProps) {
     let newCount: number
 
     if (scrollTop > 0) {
-      newCount = Math.min(PROJECTS.length, initialCount + linksScrolled)
+      newCount = Math.min(PROJECTS.length, 3 + linksScrolled)
     } else if (scrollTop < 0) {
-      newCount = Math.max(initialCount, initialCount - Math.floor(Math.abs(linksScrolled)))
+      newCount = Math.max(3, 3 - Math.floor(Math.abs(linksScrolled)))
     } else {
-      newCount = initialCount
+      newCount = 3
     }
 
     setCount(newCount)
