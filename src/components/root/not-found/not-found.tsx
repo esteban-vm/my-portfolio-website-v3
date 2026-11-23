@@ -10,7 +10,7 @@ export async function NotFound({ title }: { title: string }) {
       <TbError404 className='inline size-28 text-red-500' />
       <h2 className='text-xl'>{title}</h2>
       <Link className='mt-2 text-sky-500 hover:opacity-80' href='/'>
-        {t('link')}
+        {t('home_link')}
       </Link>
     </section>
   )

@@ -25,7 +25,7 @@
   },
   "not_found": {
     "title": "Página no encontrada",
-    "link": "Volver a inicio"
+    "home_link": "Volver a inicio"
   },
   "project_error": {
     "title": "¡Algo salió mal!",
@@ -58,6 +58,6 @@
     "not_found": "Proyecto no encontrado"
   },
   "project_modal": {
-    "close_button": "Volver atrás"
+    "close_button": "Volver a inicio"
   }
 }

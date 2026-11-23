@@ -25,7 +25,7 @@
   },
   "not_found": {
     "title": "Page not found",
-    "link": "Back to home"
+    "home_link": "Back to home"
   },
   "project_error": {
     "title": "Something went wrong!",
@@ -58,6 +58,6 @@
     "not_found": "Project not found"
   },
   "project_modal": {
-    "close_button": "Go back"
+    "close_button": "Back to home"
   }
 }
