@@ -71,19 +71,29 @@ export const PROJECTS: Project[] = [
     screenshot: '',
   },
   {
-    title: 'Note App',
-    description: 'Aplicación de notas',
+    title: 'Calculadora',
+    description: 'Aplicación de calculadora',
     slug: 'project_7',
-    repo: 'https://github.com/esteban-vm/note-app',
-    demo: 'https://note-app-esteban-vm.vercel.app/',
+    repo: 'https://github.com/esteban-vm/calculator',
+    demo: 'https://calculator-esteban-vm.vercel.app/',
     screenshot: '',
   },
   {
-    title: 'Calculator',
-    description: 'Aplicación de calculadora',
+    title: 'Página de destino ficticia 1',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ab recusandae, doloremque deserunt distinctio nam.',
     slug: 'project_8',
-    repo: 'https://github.com/esteban-vm/calculator',
-    demo: 'https://calculator-esteban-vm.vercel.app/',
+    repo: 'https://github.com/esteban-vm/bizwizz',
+    demo: 'https://bizwizz.vercel.app/',
+    screenshot: '',
+  },
+  {
+    title: 'Página de destino ficticia 2',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ab recusandae, doloremque deserunt distinctio nam.',
+    slug: 'project_9',
+    repo: 'https://github.com/esteban-vm/digisolve',
+    demo: 'https://digisolve-xi.vercel.app/',
     screenshot: '',
   },
 ]
