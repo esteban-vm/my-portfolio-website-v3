@@ -56,5 +56,8 @@
   "my_projects": {
     "title": "Projects",
     "not_found": "Project not found"
+  },
+  "project_modal": {
+    "close_button": "Go back"
   }
 }

@@ -56,5 +56,8 @@
   "my_projects": {
     "title": "Proyectos",
     "not_found": "Proyecto no encontrado"
+  },
+  "project_modal": {
+    "close_button": "Volver atrás"
   }
 }

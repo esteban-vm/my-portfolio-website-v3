@@ -2,6 +2,7 @@
 
 import type { Project } from '@/types/projects'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { use, useEffect, useRef } from 'react'
 import { browser, createPortal } from 'react-dom'
 import { IoArrowBackSharp, IoCloseSharp } from 'react-icons/io5'
@@ -12,6 +13,7 @@ export function ProjectModal({ project }: { project: Project }) {
   use(browser())
 
   const router = useRouter()
+  const t = useTranslations('project_modal')
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export function ProjectModal({ project }: { project: Project }) {
           <p>{project.description}</p>
         </Details>
         <Form method='dialog'>
-          <Button type='submit'>
+          <Button title={t('close_button')} type='submit'>
             <IoCloseSharp className='not-lg:hidden' />
             <IoArrowBackSharp className='lg:hidden' />
           </Button>
