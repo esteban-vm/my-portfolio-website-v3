@@ -11,7 +11,7 @@ export async function AboutMe() {
       <Title>{NAME}</Title>
       <Subtitle>{t('subtitle')}</Subtitle>
       <Text>
-        {t.rich('text', {
+        {t.rich('about', {
           name: NAME.slice(0, NAME.indexOf(' ')),
           important: (chunks) => <span className='font-semibold'>{chunks}</span>,
         })}
