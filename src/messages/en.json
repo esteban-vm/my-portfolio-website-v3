@@ -27,9 +27,9 @@
     "title": "Page not found",
     "link": "Back to home"
   },
-  "error": {
+  "project_error": {
     "title": "Something went wrong!",
-    "button": "Try again"
+    "retry_button": "Try again"
   },
   "about_me": {
     "subtitle": "Front-End Developer",
@@ -38,7 +38,7 @@
   "call_to_action": {
     "title": "Welcome to my portfolio website!",
     "subtitle": "Turning ideas into exceptional digital experiences",
-    "button": "Download CV"
+    "cv_link": "Download CV"
   },
   "contact_me": {
     "title": "Contact",

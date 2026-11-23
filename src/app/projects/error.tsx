@@ -11,7 +11,7 @@ interface ProjectErrorProps {
 }
 
 export default function ProjectError({ error, retry }: ProjectErrorProps) {
-  const t = useTranslations('error')
+  const t = useTranslations('project_error')
 
   useEffect(() => {
     console.error(error)
@@ -22,7 +22,7 @@ export default function ProjectError({ error, retry }: ProjectErrorProps) {
       <BiSolidError className='inline size-28 text-red-500' />
       <h2 className='text-xl'>{t('title')}</h2>
       <Button onClick={retry} type='button'>
-        {t('button')}
+        {t('retry_button')}
       </Button>
     </section>
   )

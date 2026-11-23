@@ -27,9 +27,9 @@
     "title": "Página no encontrada",
     "link": "Volver a inicio"
   },
-  "error": {
+  "project_error": {
     "title": "¡Algo salió mal!",
-    "button": "Probar de nuevo"
+    "retry_button": "Probar de nuevo"
   },
   "about_me": {
     "subtitle": "Desarrollador Front-End",
@@ -38,7 +38,7 @@
   "call_to_action": {
     "title": "¡Bienvenido/a a mi portafolio web!",
     "subtitle": "Transformando ideas en experiencias digitales excepcionales",
-    "button": "Descargar CV"
+    "cv_link": "Descargar CV"
   },
   "contact_me": {
     "title": "Contacto",

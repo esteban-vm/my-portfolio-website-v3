@@ -12,7 +12,7 @@ export async function CallToAction() {
       <Subtitle>{t('subtitle')}</Subtitle>
       <Button type='button'>
         <FaDownload />
-        <span className='font-geist font-semibold uppercase'>{t('button')}</span>
+        <span className='font-geist font-semibold uppercase'>{t('cv_link')}</span>
       </Button>
     </GridCard>
   )
