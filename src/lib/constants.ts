@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Teslo Shop',
     description:
-      'Tienda virtual de ropas ficticia hecha con Next.js App Router, DaisyUI (TailwindCSS), Prisma ORM y PostgreSQL. Cuenta con exploración del catálogo de artículos en base al género, autenticación de clientes y administradores, protección de rutas, permisos basados en roles y cambio de tema a claro u oscuro según preferencias del usuario. Los datos son traídos de una base de datos PostgreSQL externa alojada en NeonDB y las imágenes de productos nuevos se suben a una nube de Cloudinary',
+      'Tienda virtual de ropas ficticia hecha con Next.js App Router, DaisyUI (TailwindCSS), TypeScript, Prisma ORM y PostgreSQL. Cuenta con exploración del catálogo de artículos en base al género, autenticación de clientes y administradores, protección de rutas, permisos basados en roles y cambio de tema a claro u oscuro según preferencias del usuario. Los datos son traídos de una base de datos PostgreSQL externa alojada en NeonDB y las imágenes de productos nuevos se suben a una nube de Cloudinary',
     slug: 'project_1',
     repo: 'https://github.com/esteban-vm/my-teslo-shop',
     demo: 'https://my-teslo-shop.vercel.app/',
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Nextflix',
     description:
-      'Clon de Netflix hecho con Next.js App Router, Shadcn (TailwindCSS), Prisma ORM y TypeScript. Cuenta con autenticación básica (correo electrónico y contraseña), exploración de películas y tendencias actuales (con datos de ejemplo traídos de una base de datos PostgreSQL externa alojada en NeonDB y archivos multimedia alojados en Cloudinary), posibilidad de añadir múltiples perfiles por usuario y agregar favoritos.',
+      'Clon de Netflix hecho con Next.js App Router, Shadcn (TailwindCSS), Prisma ORM y TypeScript. Cuenta con autenticación básica (correo electrónico con contraseña), exploración de películas y tendencias actuales (con datos de ejemplo traídos de una base de datos PostgreSQL externa alojada en NeonDB y archivos multimedia alojados en Cloudinary), posibilidad de añadir múltiples perfiles por usuario y agregar favoritos.',
     slug: 'project_3',
     repo: 'https://github.com/esteban-vm/nextflix',
     demo: 'https://nextflix-jade.vercel.app/',
@@ -55,16 +55,18 @@ export const PROJECTS: Project[] = [
     screenshot: '',
   },
   {
-    title: 'Instagram Clone',
-    description: 'Clon de Instagram',
+    title: 'Clon de Instagram',
+    description:
+      'Clon de Instagram hecho con Next.js App Router, DaisyUI (TailwindCSS), TypeScript, Prisma ORM y PostgreSQL. Cuenta con autenticación básica (correo electrónico con contraseña), exploración de fotos, posibilidad de cambio de tema (claro/oscuro) e idioma (inglés/español)',
     slug: 'project_5',
     repo: 'https://github.com/esteban-vm/instagram-clone-v2',
     demo: 'https://instagram-clone-v2-mu.vercel.app/',
     screenshot: '',
   },
   {
-    title: 'Snap Tiles',
-    description: 'Buscador de imágenes',
+    title: 'Buscador de imágenes',
+    description:
+      'Buscador simple y seguro de imágenes hecho con Next.js App Router, DaisyUI (TailwindCSS) y TypeScript. Hace uso de la API de Pixabay para obtener las imágenes, cuenta con un campo de búsqueda diferida, además de poder ver las imágenes a modo de presentación de diapositivas y/o a pantalla completa, entre otras opciones.',
     slug: 'project_6',
     repo: 'https://github.com/esteban-vm/snap-tiles',
     demo: 'https://snap-tiles-beryl.vercel.app/',
@@ -72,7 +74,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Calculadora',
-    description: 'Aplicación de calculadora',
+    description:
+      'Aplicación simple de calculadora hecha con Vite, React, TypeScript y Emotion. Tiene cambio de tema (claro/oscuro), realiza operaciones aritméticas básicas (suma, resta, multiplicación y división), además cuenta con botones para cambio de signo (+/-), limpiar todo (AC), limpiar entrada (CE) y coma decimal, además de no permitir realizar divisiones por cero. Tiene posibilidad de instalación como PWA para usarla sin conexión así como poder utilizar el teclado para ingresar las cantidades y/o realizar las operaciones.',
     slug: 'project_7',
     repo: 'https://github.com/esteban-vm/calculator',
     demo: 'https://calculator-esteban-vm.vercel.app/',
