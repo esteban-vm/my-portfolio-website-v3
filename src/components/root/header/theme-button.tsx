@@ -19,7 +19,7 @@ export function ThemeButton() {
 
   return (
     <CircleButton onClick={onThemeChange} title={resolvedTheme === 'dark' ? t('light') : t('dark')} type='button'>
-      {resolvedTheme === 'dark' ? <FaSun className='text-amber-400' /> : <FaMoon className='text-purple-600' />}
+      {resolvedTheme === 'dark' ? <FaSun className='text-amber-400' /> : <FaMoon className='text-slate-600' />}
     </CircleButton>
   )
 }
