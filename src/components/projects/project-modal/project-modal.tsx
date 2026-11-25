@@ -48,7 +48,3 @@ const Content = tw.div`flex size-full flex-col gap-3 text-foreground lg:flex-col
 const Details = tw.div`fade-in grow overflow-y-auto fill-mode-forwards duration-1000 motion-safe:animate-in`
 const Form = tw.form`shrink-0 self-center lg:self-end`
 const Button = tw.button`flex size-12 cursor-pointer items-center justify-center rounded-lg bg-background ring-1 ring-foreground/30 hover:bg-background-content [&_svg]:size-3/5`
-
-// h-full max-h-[calc(100dvh-var(--spacing)*4)]
-// w-[98%] max-w-xl
-// w-[calc(100%-var(--spacing)*4)] max-w-7xl
