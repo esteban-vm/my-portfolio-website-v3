@@ -82,10 +82,19 @@ export const PROJECTS: Project[] = [
     screenshot: '',
   },
   {
+    title: 'Juego de conecta 4',
+    description:
+      'Versión web simple del juego de conectar 4 puntos de forma seguida tanto de forma vertical o diagonal; hecho con Vite, React y TypeScript. Se puede jugar por turnos de 2 jugadores o contra la máquina.',
+    slug: 'project_8',
+    repo: 'https://github.com/esteban-vm/connect-4-game-v2',
+    demo: 'https://connect-4-game-v2.vercel.app/',
+    screenshot: '',
+  },
+  {
     title: 'Juego de cartas',
     description:
       'Juego de cartas simple hecho con Vite, TypeScript y Phaser. Se usó programación orientada a objetos para el desarrollo, además de la API de Canvas HTML. Se puede jugar tanto en móvil como en PC arrastrando las cartas.',
-    slug: 'project_8',
+    slug: 'project_9',
     repo: 'https://github.com/esteban-vm/card-game',
     demo: 'https://card-game-ruby.vercel.app/',
     screenshot: '',
@@ -94,7 +103,7 @@ export const PROJECTS: Project[] = [
     title: 'Juego de zombies',
     description:
       'Juego simple de disparos a zombies hecho con Vite, TypeScript y PixiJS. Se usó programación orientada a objetos para el desarrollo, además de la API de Canvas HTML. Se puede jugar tanto en móvil como en PC, y cuenta con variedad de enemigos, música, efectos de sonido y de clima y barra de salud del jugador',
-    slug: 'project_9',
+    slug: 'project_10',
     repo: 'https://github.com/esteban-vm/zombie-horde-game',
     demo: 'https://zombie-horde-game.vercel.app/',
     screenshot: '',
@@ -103,7 +112,7 @@ export const PROJECTS: Project[] = [
     title: 'Juego de supervivencia',
     description:
       'Juego simple de supervivencia hecho con Vite, TypeScript y Phaser. Se usó programación orientada a objetos para el desarrollo, además de la API de Canvas HTML. Se recomienda jugar en PC o con un teclado, y cuenta con variedad de recursos y enemigos contra los que defenderse y/o atacar, así como efectos de sonido simples.',
-    slug: 'project_10',
+    slug: 'project_11',
     repo: 'https://github.com/esteban-vm/survival-game',
     demo: 'https://survival-game-rosy.vercel.app/',
     screenshot: '',
@@ -112,7 +121,7 @@ export const PROJECTS: Project[] = [
     title: 'Página de destino ficticia',
     description:
       'Página de destino para una agencia de diseño gráfico ficticia hecha con Next.js App Router, TypeScript y TailwindCSS; cuenta con secciones de Header, Servicios, Equipo, Portafolio, Testimonios, Contacto con validación de formulario y Footer. Cuenta con efectos de ondas para el fondo con SVG, animaciones hechas exclusivamente con CSS, además de un carrusel con un mínimo de JavaScript para su funcionalidad.',
-    slug: 'project_11',
+    slug: 'project_12',
     repo: 'https://github.com/esteban-vm/bizwizz',
     demo: 'https://bizwizz.vercel.app/',
     screenshot: '',
@@ -121,7 +130,7 @@ export const PROJECTS: Project[] = [
     title: 'Página de destino ficticia',
     description:
       'Página de destino para una agencia digital ficticia hecha con Next.js App Router, TypeScript y Emotion; cuenta con secciones de Header, llamada a la acción, Portafolio, Servicios, Testimonios, Precios y Footer, además de un formulario de contacto con validaciones previas al envío. La experiencia de usuario de complementa con animaciones hechas completamente con CSS, sin JavaScript.',
-    slug: 'project_12',
+    slug: 'project_13',
     repo: 'https://github.com/esteban-vm/digisolve',
     demo: 'https://digisolve-xi.vercel.app/',
     screenshot: '',
